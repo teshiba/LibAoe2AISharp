@@ -55,7 +55,7 @@ namespace LibAoe2AISharp.Specifications
         {
             get {
                 var name = GetType().FullName;
-                return name.Substring(name.IndexOf('.') + 1);
+                return name.Substring(name.IndexOf('.', StringComparison.Ordinal) + 1);
             }
         }
 

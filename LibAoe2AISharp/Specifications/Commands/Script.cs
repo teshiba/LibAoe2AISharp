@@ -65,7 +65,7 @@ namespace LibAoe2AISharp.Specifications
         /// <param name="value">Strings to be checked.</param>
         public static void AssertContainsNoSpaces(string value)
         {
-            if (value?.Contains(" ") == true) {
+            if (value?.Contains(" ", StringComparison.Ordinal) == true) {
                 throw new ArgumentOutOfRangeException(nameof(value));
             }
         }
