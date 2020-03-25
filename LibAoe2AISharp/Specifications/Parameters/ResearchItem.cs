@@ -61,11 +61,7 @@ namespace LibAoe2AISharp.Specifications
                 ret = false;
             } else {
                 var defconsts = new UndefinedResearchIdCollection();
-                if (defconsts.Contains(researchItem.ToString())) {
-                    ret = false;
-                } else {
-                    ret = true;
-                }
+                ret = !defconsts.Contains(researchItem.ToString());
             }
 
             return ret;

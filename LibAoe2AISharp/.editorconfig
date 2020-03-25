@@ -33,3 +33,6 @@ csharp_style_var_when_type_is_apparent = false:none
 
 # IDE1006: Naming Styles
 dotnet_diagnostic.IDE1006.severity = none
+
+# IDE0055: Fix formatting
+dotnet_diagnostic.IDE0055.severity = none

@@ -13,7 +13,7 @@ namespace LibAoe2AISharp.Specifications
         /// <param name="building">building.</param>
         public build(building building)
         {
-            this.Building = building;
+            Building = building;
             Comment = "Build " + building.ToLocalLang();
         }
 

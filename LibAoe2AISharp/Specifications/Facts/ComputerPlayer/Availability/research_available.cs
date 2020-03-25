@@ -1,5 +1,4 @@
 ﻿using System;
-using LibAoe2AISharp.Framework;
 using LibAoe2AISharp.Utilty;
 
 namespace LibAoe2AISharp.Specifications

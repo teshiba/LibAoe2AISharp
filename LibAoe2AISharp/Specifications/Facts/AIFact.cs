@@ -113,7 +113,7 @@ namespace LibAoe2AISharp.Specifications
             var ret = Format(Name, Comment, parameters);
 
             if (IsNot) {
-                ret = "(not " + ret.Replace(")", "))", StringComparison.Ordinal);
+                ret = "(not " + ret.Replace(")", "))");
             }
 
             return ret;

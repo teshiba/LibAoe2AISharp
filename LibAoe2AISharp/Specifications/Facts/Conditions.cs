@@ -210,12 +210,16 @@ namespace LibAoe2AISharp.Specifications
                     throw new TypeAccessException();
                 }
 
-                if (icond == null) {
+                switch (icond) {
+                case null:
                     ret = new Conditions(true);
-                } else if (icond is FalseFact) {
+                    break;
+                case FalseFact _:
                     ret = new Conditions(cond1);
-                } else {// other
+                    break;
+                default:
                     ret = new Conditions(cond1, cond2, Logical.Or);
+                    break;
                 }
             }
 
@@ -263,12 +267,16 @@ namespace LibAoe2AISharp.Specifications
                     throw new TypeAccessException();
                 }
 
-                if (icond == null) {
+                switch (icond) {
+                case null:
                     ret = cond1;
-                } else if (icond is FalseFact) {
+                    break;
+                case FalseFact _:
                     ret = new Conditions(icond);
-                } else {// other
+                    break;
+                default:
                     ret = new Conditions(cond1, cond2, Logical.And);
+                    break;
                 }
             }
 

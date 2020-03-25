@@ -14,7 +14,7 @@ namespace LibAoe2AISharp.Specifications
         /// <returns>string which is changed "_" to "-".</returns>
         public static string Convert(string className)
         {
-            return className?.Replace("_", "-", StringComparison.Ordinal);
+            return className?.Replace("_", "-");
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace LibAoe2AISharp.Specifications
         /// <param name="value">Strings to be checked.</param>
         public static void AssertContainsNoSpaces(string value)
         {
-            if (value?.Contains(" ", StringComparison.Ordinal) == true) {
+            if (value?.Contains(" ") == true) {
                 throw new ArgumentOutOfRangeException(nameof(value));
             }
         }
