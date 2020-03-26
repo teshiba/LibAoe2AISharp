@@ -14,7 +14,7 @@ namespace LibAoe2AISharp.Specifications
         /// <returns>string which is changed "_" to "-".</returns>
         public static string Convert(string className)
         {
-            return className?.Replace("_", "-", StringComparison.Ordinal);
+            return className?.Replace("_", "-");
         }
 
         /// <summary>

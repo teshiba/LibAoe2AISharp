@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using LibAoe2AISharp.Specifications;
@@ -26,7 +25,7 @@ namespace LibAoe2AISharp.Framework
 
             // Add related files.
             foreach (var item in relatedFiles) {
-                item.Author ??= author;
+                item.Author = item.Author ?? author;
                 item.ParentFile = this;
                 RelatedFiles.Add(item);
 
@@ -155,7 +154,7 @@ namespace LibAoe2AISharp.Framework
                 Facts.Add(new game_time(relop.ge, 10));
 
                 // Set the message to the chat command each \r\n.
-                foreach (var item in message.Replace("\r\n", "\n", StringComparison.Ordinal).Split('\n')) {
+                foreach (var item in message.Replace("\r\n", "\n").Split('\n')) {
                     if (!string.IsNullOrWhiteSpace(item)) {
                         Actions.Add(new chat_local_to_self(item));
                     }

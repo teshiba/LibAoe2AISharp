@@ -13,7 +13,7 @@ namespace LibAoe2AISharp.Specifications
         /// <param name="unit">Unit.</param>
         public train(unit unit)
         {
-            this.Unit = unit;
+            Unit = unit;
             Comment = "Train " + unit.ToLocalLang();
         }
 

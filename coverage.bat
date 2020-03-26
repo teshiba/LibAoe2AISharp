@@ -6,8 +6,8 @@ rem ===========================================================================
 rem Tool path
 
 set MSTEST="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe"
-set OPENCOVER="packages\OpenCover.4.7.922\tools\OpenCover.Console.exe"
-set REPORTGEN="packages\ReportGenerator.4.5.2\tools\net47\ReportGenerator.exe"
+set OPENCOVER=%USERPROFILE%"\.nuget\packages\opencover\4.7.922\tools\OpenCover.Console.exe"
+set REPORTGEN=%USERPROFILE%"\.nuget\packages\reportgenerator\4.5.2\tools\net47\ReportGenerator.exe"
 
 rem ===========================================================================
 rem target informations

@@ -99,13 +99,22 @@ namespace LibAoe2AISharp.Framework
 
         private static string GetTransitionstring(ResearchState researchOption, age targetAge)
         {
-            var ret = researchOption switch
-            {
-                ResearchState.Finished => targetAge.ToLocalLang(),
-                ResearchState.Researching => (targetAge + 1).ToLocalLang(),
-                ResearchState.NotResearching => targetAge.ToLocalLang(),
-                _ => throw new ArgumentOutOfRangeException(nameof(researchOption)),
-            };
+            string ret;
+
+            switch (researchOption) {
+            case ResearchState.Finished:
+                ret = targetAge.ToLocalLang();
+                break;
+            case ResearchState.Researching:
+                ret = (targetAge + 1).ToLocalLang();
+                break;
+            case ResearchState.NotResearching:
+                ret = targetAge.ToLocalLang();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(researchOption));
+            }
+
             return ret + " " + researchOption.ToLocalLang();
         }
 
