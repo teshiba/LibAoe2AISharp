@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using LibAoe2AISharp.Specifications;
 using LibAoe2AISharp.Specifications.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

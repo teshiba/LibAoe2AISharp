@@ -7,7 +7,6 @@ namespace LibAoe2AISharp.Framework
     /// </summary>
     public abstract class GoalValue : defconst
     {
-
         private static int count = 0;
 
         /// <summary>
