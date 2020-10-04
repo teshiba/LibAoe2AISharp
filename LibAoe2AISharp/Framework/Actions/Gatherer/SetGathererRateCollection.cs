@@ -40,13 +40,7 @@ namespace LibAoe2AISharp.Framework
 
         private static string GetChatMessage(GathererNumber gatherer)
         {
-            string unit;
-            if (gatherer.Unit == "%") {
-                unit = "[%";
-            } else {
-                unit = $"[total:{gatherer.Total}";
-            }
-
+            string unit = gatherer.Unit == "%" ? "[%" : $"[total:{gatherer.Total}";
             return unit + $" F{gatherer.Food}, W{gatherer.Wood}, G{gatherer.Gold}, S{gatherer.Stone}]";
         }
     }

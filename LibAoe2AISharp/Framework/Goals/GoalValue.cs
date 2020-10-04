@@ -1,5 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using LibAoe2AISharp.Specifications;
+﻿using LibAoe2AISharp.Specifications;
 
 namespace LibAoe2AISharp.Framework
 {
@@ -8,8 +7,6 @@ namespace LibAoe2AISharp.Framework
     /// </summary>
     public abstract class GoalValue : defconst
     {
-        private static readonly Collection<GoalValue> SelfList = new Collection<GoalValue>();
-
         private static int count = 0;
 
         /// <summary>
@@ -18,15 +15,17 @@ namespace LibAoe2AISharp.Framework
         /// <param name="constantName">constant-name.</param>
         /// <param name="comment">comment.</param>
         public GoalValue(string constantName, string comment)
-            : base(count, comment)
+            : base(constantName, count, comment)
         {
-            count++;
+            Count++;
 
-            ConstantName = constantName;
-            Comment = "goal-id value[" + count + "] " + comment;
-            Value = count;
-            SelfList.Add(this);
+            Comment = "goal-id value[" + Count + "] " + comment;
         }
+
+        /// <summary>
+        /// Gets or sets ゴールに設定する値定義.
+        /// </summary>
+        protected virtual int Count { get => count; set => count = value; }
 
         /// <summary>
         /// Convert to ai script format.

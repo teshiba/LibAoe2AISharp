@@ -202,12 +202,14 @@ namespace LibAoe2AISharp.Specifications
             } else { // other
                 ICondition icond;
 
-                if (cond2 is Conditions condObj) {
+                switch (cond2) {
+                case Conditions condObj:
                     icond = condObj.Condition1;
-                } else if (cond2 is AIFact fact) {
-                    icond = fact;
-                } else {
-                    throw new TypeAccessException();
+                    break;
+                default: {
+                    icond = cond2 is AIFact fact ? fact : throw new TypeAccessException();
+                    break;
+                }
                 }
 
                 switch (icond) {
@@ -259,12 +261,14 @@ namespace LibAoe2AISharp.Specifications
             } else {// other
                 ICondition icond;
 
-                if (cond2 is Conditions condObj) {
+                switch (cond2) {
+                case Conditions condObj:
                     icond = condObj.Condition1;
-                } else if (cond2 is AIFact fact) {
-                    icond = fact;
-                } else {
-                    throw new TypeAccessException();
+                    break;
+                default: {
+                    icond = cond2 is AIFact fact ? fact : throw new TypeAccessException();
+                    break;
+                }
                 }
 
                 switch (icond) {
