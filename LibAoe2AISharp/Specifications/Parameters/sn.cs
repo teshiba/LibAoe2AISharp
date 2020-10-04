@@ -166,8 +166,20 @@ namespace LibAoe2AISharp.Specifications
         gather_defense_units,
 
 #if USER_PATCH
+
+        /// <summary>
+        /// Villager count for assignment hunting.
+        /// </summary>
         minimum_number_hunters,
+
+        /// <summary>
+        /// Villager count for assignment boar luring.
+        /// <para>
+        /// It is usually enough one villager.
+        /// </para>
+        /// </summary>
         minimum_boar_lure_group_size,
+
         enable_boar_hunting,
 #endif // USER_PATCH
     }

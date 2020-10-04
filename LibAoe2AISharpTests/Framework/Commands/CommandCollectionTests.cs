@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using LibAoe2AISharp.Specifications;
 using LibAoe2AISharp.Specifications.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -72,6 +71,43 @@ namespace LibAoe2AISharp.Framework.Tests
             var testClass = new CommandCollection() {
                 new Build(building.archery_range),
                 new Build(building.blacksmith),
+            };
+
+            testClass.CommonFacts.Add(
+                new current_age(relop.eq, age.dark_age) {
+                    Comment = "[" + age.dark_age.ToString() + "]",
+                });
+
+            var actualValue = testClass.ToScript();
+
+            // Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        
+        [TestMethod]
+        public void CommandCollectionTestToScriptWithDefconst()
+        {
+            // Arrange
+            var expectedValue = ";===============================================================================\r\n" +
+                                ";description: \r\n" +
+                                ";common fact: [dark_age]\r\n" +
+                                "; [dark_age]: Build archery_range\r\n" +
+                                ";===============================================================================\r\n" +
+                                ";[dark_age]: Build archery_range\r\n" +
+                                "(defrule\r\n" +
+                                "    (can-build archery-range) ;Can build archery-range?\r\n" +
+                                "    (current-age == dark-age) ;[dark-age]\r\n" +
+                                "=>\r\n" +
+                                "    (build archery-range) ;Build archery_range\r\n" +
+                                ")\r\n" +
+                                "\r\n" +
+                                "(defconst defconst 0) ;defconst\r\n";
+
+            // Act
+            var testClass = new CommandCollection() {
+                new Build(building.archery_range),
+                new defconst(0),
             };
 
             testClass.CommonFacts.Add(
