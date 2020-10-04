@@ -877,7 +877,7 @@
         ArcherGroup = 900,
 
         /// <summary>
-        /// 騎兵系グループ
+        /// Cavalry group : 騎兵系グループ
         /// </summary>
         CavalryGroup = 912,
     }
