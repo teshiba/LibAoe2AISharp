@@ -63,9 +63,11 @@ namespace LibAoe2AISharp.Specifications
         public virtual IEnumerator<defconst> GetEnumerator()
         {
             foreach (var item in GetType().GetFields()) {
-                if (item.GetValue(item) is defconst defconst) {
+                switch (item.GetValue(item)) {
+                case defconst defconst:
                     yield return defconst;
-                } else {
+                    break;
+                default:
                     throw new FieldAccessException(item.Name + "is not defconst field");
                 }
             }

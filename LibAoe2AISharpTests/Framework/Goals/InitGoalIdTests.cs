@@ -15,7 +15,7 @@ namespace LibAoe2AISharp.Framework.Tests
             typeof(GoalId).GetField("count", flag).SetValue(null, 0);
             typeof(GoalValue).GetField("count", flag).SetValue(null, 0);
 
-            var expectedValue = ";Initalize goal ID parameters\r\n" +
+            var expectedValue = ";Initialize goal ID parameters\r\n" +
                                 "(defrule\r\n" +
                                 "    (true)\r\n" +
                                 "=>\r\n" +
@@ -29,7 +29,7 @@ namespace LibAoe2AISharp.Framework.Tests
             // Assert
             Assert.AreEqual("(set-goal AgeState Transitioned)", testClass.Actions[0].ToScript());
             Assert.AreEqual("(disable-self)", testClass.Actions[1].ToScript());
-            Assert.AreEqual("Initalize goal ID parameters", testClass.Comment);
+            Assert.AreEqual("Initialize goal ID parameters", testClass.Comment);
             Assert.AreEqual(string.Empty, testClass.DebugActions.ToScript("InitGoalId", testClass.Comment));
             Assert.AreEqual("(true)" + Environment.NewLine, testClass.Facts.ToScript());
             Assert.AreEqual(expectedValue, testClass.ToScript());

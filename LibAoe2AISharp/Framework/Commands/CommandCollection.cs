@@ -50,9 +50,11 @@ namespace LibAoe2AISharp.Framework
         {
             // Add common comment before outputing.
             if (CommonFacts.Count != 0) {
-                foreach (defrule item in this) {
-                    item.Facts.Add(CommonFacts.ToArray());
-                    item.Comment = CommonFacts[0].Comment + ": " + item.Comment;
+                foreach (var item in this) {
+                    if (item is defrule rule) {
+                        rule.Facts.Add(CommonFacts.ToArray());
+                        rule.Comment = CommonFacts[0].Comment + ": " + rule.Comment;
+                    }
                 }
             }
 
