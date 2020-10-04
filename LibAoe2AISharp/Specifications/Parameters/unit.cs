@@ -880,5 +880,12 @@
         /// Cavalry group : 騎兵系グループ
         /// </summary>
         CavalryGroup = 912,
+
+        // extention ID ///////////////////////////////////////////////////////
+
+        /// <summary>
+        /// villager hunter : 狩りをする町の人.
+        /// </summary>
+        villager_hunter = 976,
     }
 }
