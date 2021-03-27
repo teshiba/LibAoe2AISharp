@@ -27,7 +27,7 @@ namespace LibAoe2AISharp.Specifications
         /// </summary>
         public void OutputFile()
         {
-            using (var sw = new StreamWriter(PathName + @"\" + FileName + ".per")) {
+            using (var sw = new StreamWriter(PathName + @"/" + FileName + ".per")) {
                 sw.Write(OutputScript);
             }
         }

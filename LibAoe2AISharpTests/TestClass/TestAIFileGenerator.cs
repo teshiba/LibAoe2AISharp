@@ -2,10 +2,7 @@
 {
     public class TestAIFileGenerator : AIFileGenerator
     {
-        public override string FileName
-        {
-            get { return GetType().Name; }
-        }
+        public override string FileName { get => "TestAIFileGenerator"; }
 
         public override string PathName { get; set; }
 
