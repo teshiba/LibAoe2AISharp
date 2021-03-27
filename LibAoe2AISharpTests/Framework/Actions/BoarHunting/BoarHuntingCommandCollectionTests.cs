@@ -9,6 +9,8 @@ namespace LibAoe2AISharp.Framework.Tests
         public void BoarHuntingCommandCollectionTest()
         {
             // Arrange
+            var goalId = BoarHuntingCommandCollection.BoarState.Value;
+
             var expVal =
                 ";===============================================================================\r\n" +
                 ";description: \r\n" +
@@ -19,7 +21,7 @@ namespace LibAoe2AISharp.Framework.Tests
                 "; Boar is far. Then stop hunting.\r\n" +
                 "; Boar nothing\r\n" +
                 ";===============================================================================\r\n" +
-                "(defconst BoarState 1) ;goal-id[1] State of boar hunting\r\n" +
+                $"(defconst BoarState {goalId}) ;goal-id[{goalId}] State of boar hunting\r\n" +
                 "(defconst BoarInit 0) ;goal-id value[0] [Boar]Not hunt yet\r\n" +
                 "(defconst Boarluring 1) ;goal-id value[1] [Boar]Luring\r\n" +
                 "(defconst BoarEating 2) ;goal-id value[2] [Boar]Eating\r\n" +

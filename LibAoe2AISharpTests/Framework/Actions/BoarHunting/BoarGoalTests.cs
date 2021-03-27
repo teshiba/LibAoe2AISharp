@@ -1,15 +1,20 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Reflection;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
 {
     [TestClass()]
     public class BoarGoalTests
     {
+
         [TestMethod()]
         public void BoarGoalTest()
         {
             // Arrange
-            var expVal = "(defconst BoarTestState 0) ;goal-id value[0] [Boar]test comment";
+            var BindingAttr = BindingFlags.NonPublic | BindingFlags.Static;
+            var goalVal = (int)typeof(BoarGoal).GetField("count", BindingAttr).GetValue(null);
+            var expVal = $"(defconst BoarTestState {goalVal}) ;goal-id value[{goalVal}] [Boar]test comment";
 
             // Act
             var testClass = new BoarGoal("TestState", "test comment");
