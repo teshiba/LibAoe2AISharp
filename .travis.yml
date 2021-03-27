@@ -4,7 +4,6 @@ dotnet:
   - 2.1.814
   - 3.1.407
 solution: LibAoe2AISharp.sln
-dist: trusty
 script:
   - dotnet restore
   - dotnet test
