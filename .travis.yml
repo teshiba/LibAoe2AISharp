@@ -1,8 +1,6 @@
 language: csharp
 mono: none
-dotnet:
-  - 2.1.814
-  - 3.1.407
+dotnet: 3.1.407
 solution: LibAoe2AISharp.sln
 script:
   - dotnet restore
