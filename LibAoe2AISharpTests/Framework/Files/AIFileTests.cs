@@ -11,7 +11,7 @@ namespace LibAoe2AISharp.Framework.Tests
         public void AIFileTest()
         {
             // Arrange
-            var expectedPathName = ".\\";
+            var expectedPathName = "./";
             var expectedAuthorName = "author name";
             var perfile1 = new TestPerFile();
             var perfile2 = new TestPerFile {
@@ -34,7 +34,7 @@ namespace LibAoe2AISharp.Framework.Tests
             typeof(GoalId).GetField("count", flag).SetValue(null, 0);
             typeof(GoalValue).GetField("count", flag).SetValue(null, 0);
 
-            var expectedPathName = ".\\";
+            var expectedPathName = "./";
             var expectedAuthorName = "author name";
             var perFileData = string.Empty;
             var aiFileData = string.Empty;

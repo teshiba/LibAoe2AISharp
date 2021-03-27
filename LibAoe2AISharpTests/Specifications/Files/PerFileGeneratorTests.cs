@@ -14,7 +14,7 @@ namespace LibAoe2AISharp.Specifications.Tests
             var readScript = string.Empty;
 
             var perFile = new TestPerFileGenerator {
-                PathName = Environment.CurrentDirectory + @"\",
+                PathName = Environment.CurrentDirectory + @"/",
             };
 
             // Act

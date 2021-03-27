@@ -45,7 +45,7 @@ namespace LibAoe2AISharp.Framework
         public void OutputFiles()
         {
             // Generate empty .ai file
-            using (var sw = new StreamWriter(PathName + @"\" + FileName + ".ai")) {
+            using (var sw = new StreamWriter(PathName + @"/" + FileName + ".ai")) {
             }
 
             // Generate .per file paired with .ai file
