@@ -13,9 +13,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void CommandCollectionTest()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: \r\n" +
-                                ";===============================================================================\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: " + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine;
 
             // Act
             var testClass = new CommandCollection();
@@ -29,9 +29,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void CommandCollectionTestComment()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: CommandCollection comment\r\n" +
-                                ";===============================================================================\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: CommandCollection comment" + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine;
 
             // Act
             var testClass = new CommandCollection("CommandCollection comment");
@@ -45,27 +45,27 @@ namespace LibAoe2AISharp.Framework.Tests
         public void CommandCollectionTestToScript()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: \r\n" +
-                                ";common fact: [dark_age]\r\n" +
-                                "; [dark_age]: Build archery_range\r\n" +
-                                "; [dark_age]: Build blacksmith\r\n" +
-                                ";===============================================================================\r\n" +
-                                ";[dark_age]: Build archery_range\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-build archery-range) ;Can build archery-range?\r\n" +
-                                "    (current-age == dark-age) ;[dark-age]\r\n" +
-                                "=>\r\n" +
-                                "    (build archery-range) ;Build archery_range\r\n" +
-                                ")\r\n\r\n" +
-                                ";[dark_age]: Build blacksmith\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-build blacksmith) ;Can build blacksmith?\r\n" +
-                                "    (current-age == dark-age) ;[dark-age]\r\n" +
-                                "=>\r\n" +
-                                "    (build blacksmith) ;Build blacksmith\r\n" +
-                                ")\r\n" +
-                                "\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: " + Environment.NewLine +
+                                ";common fact: [dark_age]" + Environment.NewLine +
+                                "; [dark_age]: Build archery_range" + Environment.NewLine +
+                                "; [dark_age]: Build blacksmith" + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine +
+                                ";[dark_age]: Build archery_range" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-build archery-range) ;Can build archery-range?" + Environment.NewLine +
+                                "    (current-age == dark-age) ;[dark-age]" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (build archery-range) ;Build archery_range" + Environment.NewLine +
+                                ")" + Environment.NewLine + Environment.NewLine +
+                                ";[dark_age]: Build blacksmith" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-build blacksmith) ;Can build blacksmith?" + Environment.NewLine +
+                                "    (current-age == dark-age) ;[dark-age]" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (build blacksmith) ;Build blacksmith" + Environment.NewLine +
+                                ")" + Environment.NewLine +
+                                "" + Environment.NewLine;
 
             // Act
             var testClass = new CommandCollection() {
@@ -89,20 +89,20 @@ namespace LibAoe2AISharp.Framework.Tests
         public void CommandCollectionTestToScriptWithDefconst()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: \r\n" +
-                                ";common fact: [dark_age]\r\n" +
-                                "; [dark_age]: Build archery_range\r\n" +
-                                ";===============================================================================\r\n" +
-                                ";[dark_age]: Build archery_range\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-build archery-range) ;Can build archery-range?\r\n" +
-                                "    (current-age == dark-age) ;[dark-age]\r\n" +
-                                "=>\r\n" +
-                                "    (build archery-range) ;Build archery_range\r\n" +
-                                ")\r\n" +
-                                "\r\n" +
-                                "(defconst defconst 0) ;defconst\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: " + Environment.NewLine +
+                                ";common fact: [dark_age]" + Environment.NewLine +
+                                "; [dark_age]: Build archery_range" + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine +
+                                ";[dark_age]: Build archery_range" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-build archery-range) ;Can build archery-range?" + Environment.NewLine +
+                                "    (current-age == dark-age) ;[dark-age]" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (build archery-range) ;Build archery_range" + Environment.NewLine +
+                                ")" + Environment.NewLine +
+                                "" + Environment.NewLine +
+                                "(defconst defconst 0) ;defconst" + Environment.NewLine;
 
             // Act
             var testClass = new CommandCollection() {

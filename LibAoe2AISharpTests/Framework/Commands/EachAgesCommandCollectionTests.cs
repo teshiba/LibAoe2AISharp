@@ -11,10 +11,10 @@ namespace LibAoe2AISharp.Framework.Tests
         public void EachAgesCommandCollectionTest()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: castle_age NotResearching: comment CastleAge\r\n" +
-                                ";common fact: [CastleAge]\r\n" +
-                                ";===============================================================================\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: castle_age NotResearching: comment CastleAge" + Environment.NewLine +
+                                ";common fact: [CastleAge]" + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine;
 
             // Act
             var testClass = new EachAgesCommandCollection(CastleAge, "comment CastleAge");
@@ -28,9 +28,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void EachAgesCommandCollectionTestAllAges()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: post_imperial_age NotResearching: comment AllAges\r\n" +
-                                ";===============================================================================\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: post_imperial_age NotResearching: comment AllAges" + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine;
 
             // Act
             var testClass = new EachAgesCommandCollection(AllAges, "comment AllAges");
@@ -44,10 +44,10 @@ namespace LibAoe2AISharp.Framework.Tests
         public void EachAgesCommandCollectionTestWithFinished()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: castle_age Finished: comment CastleAge Finished\r\n" +
-                                ";common fact: [CastleAgeOnly]\r\n" +
-                                ";===============================================================================\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: castle_age Finished: comment CastleAge Finished" + Environment.NewLine +
+                                ";common fact: [CastleAgeOnly]" + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine;
 
             // Act
             var testClass = new EachAgesCommandCollection(CastleAge, ResearchState.Finished, "comment CastleAge Finished");
@@ -61,10 +61,10 @@ namespace LibAoe2AISharp.Framework.Tests
         public void EachAgesCommandCollectionTestWithNotResearching()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: castle_age NotResearching: comment CastleAge NotResearching\r\n" +
-                                ";common fact: [CastleAge]\r\n" +
-                                ";===============================================================================\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: castle_age NotResearching: comment CastleAge NotResearching" + Environment.NewLine +
+                                ";common fact: [CastleAge]" + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine;
 
             // Act
             var testClass = new EachAgesCommandCollection(CastleAge, ResearchState.NotResearching, "comment CastleAge NotResearching");
@@ -78,10 +78,10 @@ namespace LibAoe2AISharp.Framework.Tests
         public void EachAgesCommandCollectionTestWithResearching()
         {
             // Arrange
-            var expectedValue = ";===============================================================================\r\n" +
-                                ";description: imperial_age Researching: comment CastleAge Researching\r\n" +
-                                ";common fact: [ToImperialAge]\r\n" +
-                                ";===============================================================================\r\n";
+            var expectedValue = ";===============================================================================" + Environment.NewLine +
+                                ";description: imperial_age Researching: comment CastleAge Researching" + Environment.NewLine +
+                                ";common fact: [ToImperialAge]" + Environment.NewLine +
+                                ";===============================================================================" + Environment.NewLine;
 
             // Act
             var testClass = new EachAgesCommandCollection(CastleAge, ResearchState.Researching, "comment CastleAge Researching");

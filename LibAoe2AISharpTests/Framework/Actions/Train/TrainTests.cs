@@ -1,4 +1,6 @@
-﻿using LibAoe2AISharp.Specifications;
+﻿using System;
+
+using LibAoe2AISharp.Specifications;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
@@ -10,12 +12,12 @@ namespace LibAoe2AISharp.Framework.Tests
         public void TrainTest()
         {
             // Arrange
-            var expectedValue = ";Train archer\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-train archer) ;Can train archer?\r\n" +
-                                "=>\r\n" +
-                                "    (train archer) ;Train archer\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Train archer" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-train archer) ;Can train archer?" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (train archer) ;Train archer" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new Train(unit.archer);
@@ -29,13 +31,13 @@ namespace LibAoe2AISharp.Framework.Tests
         public void TrainTestCount()
         {
             // Arrange
-            var expectedValue = ";Train archer up to 10\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-train archer) ;Can train archer?\r\n" +
-                                "    (unit-type-count-total archer < 10) ;Check count : unit archer\r\n" +
-                                "=>\r\n" +
-                                "    (train archer) ;Train archer\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Train archer up to 10" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-train archer) ;Can train archer?" + Environment.NewLine +
+                                "    (unit-type-count-total archer < 10) ;Check count : unit archer" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (train archer) ;Train archer" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new Train(unit.archer, 10);

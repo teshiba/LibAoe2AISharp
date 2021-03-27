@@ -11,17 +11,17 @@ namespace LibAoe2AISharp.Framework.Tests
         public void SetGathererRateTestCount1()
         {
             // Arrange
-            string expectedValue =  ";[total:100 F50, W30, G10, S10]:set gatherer rate comment\r\n" +
-                                    "(defrule\r\n" +
-                                    "    (unit-type-count villager == 100) ;Check count : unit villager\r\n" +
-                                    "    (TestAIFact testAIFactParam)\r\n" +
-                                    "=>\r\n" +
-                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage\r\n" +
-                                    "    (disable-self)\r\n" +
-                                    ")\r\n";
+            string expectedValue =  ";[total:100 F50, W30, G10, S10]:set gatherer rate comment" + Environment.NewLine +
+                                    "(defrule" + Environment.NewLine +
+                                    "    (unit-type-count villager == 100) ;Check count : unit villager" + Environment.NewLine +
+                                    "    (TestAIFact testAIFactParam)" + Environment.NewLine +
+                                    "=>" + Environment.NewLine +
+                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage" + Environment.NewLine +
+                                    "    (disable-self)" + Environment.NewLine +
+                                    ")" + Environment.NewLine;
 
             // Act
             var testClass = new SetGathererRate(100, 50, 30, 10, 10, new TestAIFact(), "set gatherer rate comment");
@@ -35,16 +35,16 @@ namespace LibAoe2AISharp.Framework.Tests
         public void SetGathererRateTestCount2()
         {
             // Arrange
-            string expectedValue =  ";[total:100 F50, W30, G10, S10]\r\n" +
-                                    "(defrule\r\n" +
-                                    "    (unit-type-count villager == 100) ;Check count : unit villager\r\n" +
-                                    "=>\r\n" +
-                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage\r\n" +
-                                    "    (disable-self)\r\n" +
-                                    ")\r\n";
+            string expectedValue =  ";[total:100 F50, W30, G10, S10]" + Environment.NewLine +
+                                    "(defrule" + Environment.NewLine +
+                                    "    (unit-type-count villager == 100) ;Check count : unit villager" + Environment.NewLine +
+                                    "=>" + Environment.NewLine +
+                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage" + Environment.NewLine +
+                                    "    (disable-self)" + Environment.NewLine +
+                                    ")" + Environment.NewLine;
 
             // Act
             var testClass = new SetGathererRate(100, 50, 30, 10, 10);
@@ -58,17 +58,17 @@ namespace LibAoe2AISharp.Framework.Tests
         public void SetGathererRateTestCount3()
         {
             // Arrange
-            string expectedValue =  ";[total:100 F50, W30, G10, S10]\r\n" +
-                                    "(defrule\r\n" +
-                                    "    (unit-type-count villager == 100) ;Check count : unit villager\r\n" +
-                                    "    (TestAIFact testAIFactParam)\r\n" +
-                                    "=>\r\n" +
-                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage\r\n" +
-                                    "    (disable-self)\r\n" +
-                                    ")\r\n";
+            string expectedValue =  ";[total:100 F50, W30, G10, S10]" + Environment.NewLine +
+                                    "(defrule" + Environment.NewLine +
+                                    "    (unit-type-count villager == 100) ;Check count : unit villager" + Environment.NewLine +
+                                    "    (TestAIFact testAIFactParam)" + Environment.NewLine +
+                                    "=>" + Environment.NewLine +
+                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage" + Environment.NewLine +
+                                    "    (disable-self)" + Environment.NewLine +
+                                    ")" + Environment.NewLine;
 
             // Act
             var testClass = new SetGathererRate(100, 50, 30, 10, 10, new TestAIFact());
@@ -82,16 +82,16 @@ namespace LibAoe2AISharp.Framework.Tests
         public void SetGathererRateTestPercent1()
         {
             // Arrange
-            string expectedValue =  ";[% F50, W30, G10, S10]:set gatherer rate comment\r\n" +
-                                    "(defrule\r\n" +
-                                    "    (TestAIFact testAIFactParam)\r\n" +
-                                    "=>\r\n" +
-                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage\r\n" +
-                                    "    (disable-self)\r\n" +
-                                    ")\r\n";
+            string expectedValue =  ";[% F50, W30, G10, S10]:set gatherer rate comment" + Environment.NewLine +
+                                    "(defrule" + Environment.NewLine +
+                                    "    (TestAIFact testAIFactParam)" + Environment.NewLine +
+                                    "=>" + Environment.NewLine +
+                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage" + Environment.NewLine +
+                                    "    (disable-self)" + Environment.NewLine +
+                                    ")" + Environment.NewLine;
 
             // Act
             var testClass = new SetGathererRate(50, 30, 10, 10, new TestAIFact(), "set gatherer rate comment");
@@ -105,16 +105,16 @@ namespace LibAoe2AISharp.Framework.Tests
         public void SetGathererRateTestPercent2()
         {
             // Arrange
-            string expectedValue =  ";[% F50, W30, G10, S10]\r\n" +
-                                    "(defrule\r\n" +
-                                    "    (TestAIFact testAIFactParam)\r\n" +
-                                    "=>\r\n" +
-                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage\r\n" +
-                                    "    (disable-self)\r\n" +
-                                    ")\r\n";
+            string expectedValue =  ";[% F50, W30, G10, S10]" + Environment.NewLine +
+                                    "(defrule" + Environment.NewLine +
+                                    "    (TestAIFact testAIFactParam)" + Environment.NewLine +
+                                    "=>" + Environment.NewLine +
+                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage" + Environment.NewLine +
+                                    "    (disable-self)" + Environment.NewLine +
+                                    ")" + Environment.NewLine;
 
             // Act
             var testClass = new SetGathererRate(50, 30, 10, 10, new TestAIFact());
@@ -128,16 +128,16 @@ namespace LibAoe2AISharp.Framework.Tests
         public void SetGathererRateTestPercent3()
         {
             // Arrange
-            string expectedValue =  ";[% F50, W30, G10, S10]\r\n" +
-                                    "(defrule\r\n" +
-                                    "    (true)\r\n" +
-                                    "=>\r\n" +
-                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage\r\n" +
-                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage\r\n" +
-                                    "    (disable-self)\r\n" +
-                                    ")\r\n";
+            string expectedValue =  ";[% F50, W30, G10, S10]" + Environment.NewLine +
+                                    "(defrule" + Environment.NewLine +
+                                    "    (true)" + Environment.NewLine +
+                                    "=>" + Environment.NewLine +
+                                    "    (set-strategic-number sn-food-gatherer-percentage 50) ;food_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-wood-gatherer-percentage 30) ;wood_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-gold-gatherer-percentage 10) ;gold_gatherer_percentage" + Environment.NewLine +
+                                    "    (set-strategic-number sn-stone-gatherer-percentage 10) ;stone_gatherer_percentage" + Environment.NewLine +
+                                    "    (disable-self)" + Environment.NewLine +
+                                    ")" + Environment.NewLine;
 
             // Act
             var testClass = new SetGathererRate(50, 30, 10, 10);

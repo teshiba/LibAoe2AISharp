@@ -1,4 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using System.Xml;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
 {
@@ -9,12 +12,12 @@ namespace LibAoe2AISharp.Framework.Tests
         public void BuildHouseTest()
         {
             // Arrange
-            var expectedValue = ";Build house\r\n" +
-                "(defrule\r\n" +
-                "    (can-build house) ;Can build house?\r\n" +
-                "=>\r\n" +
-                "    (build house) ;Build house\r\n" +
-                ")\r\n";
+            var expectedValue = ";Build house" + Environment.NewLine +
+                "(defrule" + Environment.NewLine +
+                "    (can-build house) ;Can build house?" + Environment.NewLine +
+                "=>" + Environment.NewLine +
+                "    (build house) ;Build house" + Environment.NewLine +
+                ")" + Environment.NewLine;
 
             // Act
             var testClass = new BuildHouse();
@@ -28,13 +31,13 @@ namespace LibAoe2AISharp.Framework.Tests
         public void BuildHouseTestRemain()
         {
             // Arrange
-            var expectedValue = ";Build house remaining capacity less than 10\r\n" +
-                "(defrule\r\n" +
-                "    (can-build house) ;Can build house?\r\n" +
-                "    (housing-headroom <= 10) ;checks remaining populations capacity\r\n" +
-                "=>\r\n" +
-                "    (build house) ;Build house\r\n" +
-                ")\r\n";
+            var expectedValue = ";Build house remaining capacity less than 10" + Environment.NewLine +
+                "(defrule" + Environment.NewLine +
+                "    (can-build house) ;Can build house?" + Environment.NewLine +
+                "    (housing-headroom <= 10) ;checks remaining populations capacity" + Environment.NewLine +
+                "=>" + Environment.NewLine +
+                "    (build house) ;Build house" + Environment.NewLine +
+                ")" + Environment.NewLine;
 
             // Act
             var testClass = new BuildHouse(10);

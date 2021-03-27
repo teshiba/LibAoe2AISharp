@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
 {
@@ -10,12 +12,12 @@ namespace LibAoe2AISharp.Framework.Tests
         {
             // Arrange
             var expectedValue = string.Empty;
-            expectedValue += ";Build archery_range\r\n";
-            expectedValue += "(defrule\r\n";
-            expectedValue += "    (can-build archery-range) ;Can build archery-range?\r\n";
-            expectedValue += "=>\r\n";
-            expectedValue += "    (build archery-range) ;Build archery_range\r\n";
-            expectedValue += ")\r\n";
+            expectedValue += ";Build archery_range" + Environment.NewLine;
+            expectedValue += "(defrule" + Environment.NewLine;
+            expectedValue += "    (can-build archery-range) ;Can build archery-range?" + Environment.NewLine;
+            expectedValue += "=>" + Environment.NewLine;
+            expectedValue += "    (build archery-range) ;Build archery_range" + Environment.NewLine;
+            expectedValue += ")" + Environment.NewLine;
 
             // Act
             var testClass = new Build(Specifications.building.archery_range);
@@ -30,13 +32,13 @@ namespace LibAoe2AISharp.Framework.Tests
         {
             // Arrange
             var expectedValue = string.Empty;
-            expectedValue += ";Build archery_range up to 10.\r\n";
-            expectedValue += "(defrule\r\n";
-            expectedValue += "    (can-build archery-range) ;Can build archery-range?\r\n";
-            expectedValue += "    (building-type-count-total archery-range < 10) ;Count of archery-range\r\n";
-            expectedValue += "=>\r\n";
-            expectedValue += "    (build archery-range) ;Build archery_range\r\n";
-            expectedValue += ")\r\n";
+            expectedValue += ";Build archery_range up to 10." + Environment.NewLine;
+            expectedValue += "(defrule" + Environment.NewLine;
+            expectedValue += "    (can-build archery-range) ;Can build archery-range?" + Environment.NewLine;
+            expectedValue += "    (building-type-count-total archery-range < 10) ;Count of archery-range" + Environment.NewLine;
+            expectedValue += "=>" + Environment.NewLine;
+            expectedValue += "    (build archery-range) ;Build archery_range" + Environment.NewLine;
+            expectedValue += ")" + Environment.NewLine;
 
             // Act
             var testClass = new Build(Specifications.building.archery_range, 10);

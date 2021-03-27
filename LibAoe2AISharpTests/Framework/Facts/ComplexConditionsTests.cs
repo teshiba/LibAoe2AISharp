@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
 {
@@ -9,9 +11,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void AnyAllyHasMarketTest()
         {
             // Arrange
-            var expectedValue = "(and ;Any ally has market\r\n" +
-                                "    (player-in-game any-ally)\r\n" +
-                                "    (players-building-type-count any-ally market >= 1)\r\n" +
+            var expectedValue = "(and ;Any ally has market" + Environment.NewLine +
+                                "    (player-in-game any-ally)" + Environment.NewLine +
+                                "    (players-building-type-count any-ally market >= 1)" + Environment.NewLine +
                                 ")";
 
             // Act
@@ -26,9 +28,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void ShepherdExistTest()
         {
             // Arrange
-            var expectedValue = "(or ;Shepherd exist\r\n" +
-                                "    (unit-type-count-total ShepherdMan >= 1) ;Check count : unit ShepherdMan\r\n" +
-                                "    (unit-type-count-total ShepherdWoman >= 1) ;Check count : unit ShepherdWoman\r\n" +
+            var expectedValue = "(or ;Shepherd exist" + Environment.NewLine +
+                                "    (unit-type-count-total ShepherdMan >= 1) ;Check count : unit ShepherdMan" + Environment.NewLine +
+                                "    (unit-type-count-total ShepherdWoman >= 1) ;Check count : unit ShepherdWoman" + Environment.NewLine +
                                 ")";
 
             // Act
@@ -43,9 +45,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void HunterExistTest()
         {
             // Arrange
-            var expectedValue = "(or ;Hunter exist\r\n" +
-                                "    (unit-type-count-total HunterMan >= 1) ;Check count : unit HunterMan\r\n" +
-                                "    (unit-type-count-total HunterWoman >= 1) ;Check count : unit HunterWoman\r\n" +
+            var expectedValue = "(or ;Hunter exist" + Environment.NewLine +
+                                "    (unit-type-count-total HunterMan >= 1) ;Check count : unit HunterMan" + Environment.NewLine +
+                                "    (unit-type-count-total HunterWoman >= 1) ;Check count : unit HunterWoman" + Environment.NewLine +
                                 ")";
 
             // Act
@@ -60,9 +62,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void FisherExistTest()
         {
             // Arrange
-            var expectedValue = "(or ;Fisher exist\r\n" +
-                                "    (unit-type-count-total FisherMan >= 1) ;Check count : unit FisherMan\r\n" +
-                                "    (unit-type-count-total FisherWoman >= 1) ;Check count : unit FisherWoman\r\n" +
+            var expectedValue = "(or ;Fisher exist" + Environment.NewLine +
+                                "    (unit-type-count-total FisherMan >= 1) ;Check count : unit FisherMan" + Environment.NewLine +
+                                "    (unit-type-count-total FisherWoman >= 1) ;Check count : unit FisherWoman" + Environment.NewLine +
                                 ")";
 
             // Act
@@ -77,9 +79,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void HarvesterExistTest()
         {
             // Arrange
-            var expectedValue = "(or ;Harvester exist\r\n" +
-                "    (unit-type-count-total HarvesterMan >= 1) ;Check count : unit HarvesterMan\r\n" +
-                "    (unit-type-count-total HarvesterWoman >= 1) ;Check count : unit HarvesterWoman\r\n" +
+            var expectedValue = "(or ;Harvester exist" + Environment.NewLine +
+                "    (unit-type-count-total HarvesterMan >= 1) ;Check count : unit HarvesterMan" + Environment.NewLine +
+                "    (unit-type-count-total HarvesterWoman >= 1) ;Check count : unit HarvesterWoman" + Environment.NewLine +
                 ")";
 
             // Act
@@ -94,15 +96,15 @@ namespace LibAoe2AISharp.Framework.Tests
         public void MinerExistTest()
         {
             // Arrange
-            var expectedValue = "(or ;Miner exist\r\n" +
-                                "    (or\r\n" +
-                                "        (unit-type-count-total GoldMinerMan >= 1) ;Check count : unit GoldMinerMan\r\n" +
-                                "        (unit-type-count-total GoldMinerWoman >= 1) ;Check count : unit GoldMinerWoman\r\n" +
-                                "    )\r\n" +
-                                "    (or\r\n" +
-                                "        (unit-type-count-total StoneMinerMan >= 1) ;Check count : unit StoneMinerMan\r\n" +
-                                "        (unit-type-count-total StoneMinerWoman >= 1) ;Check count : unit StoneMinerWoman\r\n" +
-                                "    )\r\n" +
+            var expectedValue = "(or ;Miner exist" + Environment.NewLine +
+                                "    (or" + Environment.NewLine +
+                                "        (unit-type-count-total GoldMinerMan >= 1) ;Check count : unit GoldMinerMan" + Environment.NewLine +
+                                "        (unit-type-count-total GoldMinerWoman >= 1) ;Check count : unit GoldMinerWoman" + Environment.NewLine +
+                                "    )" + Environment.NewLine +
+                                "    (or" + Environment.NewLine +
+                                "        (unit-type-count-total StoneMinerMan >= 1) ;Check count : unit StoneMinerMan" + Environment.NewLine +
+                                "        (unit-type-count-total StoneMinerWoman >= 1) ;Check count : unit StoneMinerWoman" + Environment.NewLine +
+                                "    )" + Environment.NewLine +
                                 ")";
 
             // Act
@@ -117,9 +119,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void FarmerExistTest()
         {
             // Arrange
-            var expectedValue = "(or ;Farmer exist\r\n" +
-                                "    (unit-type-count-total FarmerMan >= 1) ;Check count : unit FarmerMan\r\n" +
-                                "    (unit-type-count-total FarmerWoman >= 1) ;Check count : unit FarmerWoman\r\n" +
+            var expectedValue = "(or ;Farmer exist" + Environment.NewLine +
+                                "    (unit-type-count-total FarmerMan >= 1) ;Check count : unit FarmerMan" + Environment.NewLine +
+                                "    (unit-type-count-total FarmerWoman >= 1) ;Check count : unit FarmerWoman" + Environment.NewLine +
                                 ")";
 
             // Act
@@ -134,9 +136,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void LumberjackExistTest()
         {
             // Arrange
-            var expectedValue = "(or ;Lumberjack exist\r\n" +
-                                "    (unit-type-count-total LumberjackMan >= 1) ;Check count : unit LumberjackMan\r\n" +
-                                "    (unit-type-count-total LumberjackWonam >= 1) ;Check count : unit LumberjackWonam\r\n" +
+            var expectedValue = "(or ;Lumberjack exist" + Environment.NewLine +
+                                "    (unit-type-count-total LumberjackMan >= 1) ;Check count : unit LumberjackMan" + Environment.NewLine +
+                                "    (unit-type-count-total LumberjackWonam >= 1) ;Check count : unit LumberjackWonam" + Environment.NewLine +
                                 ")";
 
             // Act

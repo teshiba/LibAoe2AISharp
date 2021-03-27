@@ -1,4 +1,6 @@
-﻿using LibAoe2AISharp.Specifications;
+﻿using System;
+
+using LibAoe2AISharp.Specifications;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
@@ -10,12 +12,12 @@ namespace LibAoe2AISharp.Framework.Tests
         public void ResearchTestResearchAge()
         {
             // Arrange
-            var expectedValue = ";Research castle_age\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-research castle-age) ;Can research castle-age?\r\n" +
-                                "=>\r\n" +
-                                "    (research castle-age) ;Research castle_age\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Research castle_age" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-research castle-age) ;Can research castle-age?" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (research castle-age) ;Research castle_age" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new Research(age.castle_age);
@@ -29,12 +31,12 @@ namespace LibAoe2AISharp.Framework.Tests
         public void ResearchTestReaearchItem()
         {
             // Arrange
-            var expectedValue = ";Research cavalier\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-research ri-cavalier) ;Can research cavalier?\r\n" +
-                                "=>\r\n" +
-                                "    (research ri-cavalier) ;Research cavalier\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Research cavalier" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-research ri-cavalier) ;Can research cavalier?" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (research ri-cavalier) ;Research cavalier" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new Research(ri.cavalier);
@@ -48,13 +50,13 @@ namespace LibAoe2AISharp.Framework.Tests
         public void ResearchTestReaearchItemUnitCount()
         {
             // Arrange
-            var expectedValue = ";Research fletching :archer up to 10\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-research ri-fletching) ;Can research fletching?\r\n" +
-                                "    (unit-type-count-total archer >= 10) ;Check count : unit archer\r\n" +
-                                "=>\r\n" +
-                                "    (research ri-fletching) ;Research fletching\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Research fletching :archer up to 10" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-research ri-fletching) ;Can research fletching?" + Environment.NewLine +
+                                "    (unit-type-count-total archer >= 10) ;Check count : unit archer" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (research ri-fletching) ;Research fletching" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new Research(ri.fletching, unit.archer, 10);

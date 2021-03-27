@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
 {
@@ -9,13 +11,13 @@ namespace LibAoe2AISharp.Framework.Tests
         public void BuildLumberCampTest()
         {
             // Arrange
-            var expectedValue = ";Build lumber_camp Distance more than 10\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-build lumber-camp) ;Can build lumber-camp?\r\n" +
-                                "    (dropsite-min-distance wood >= 10) ; Distance 10 ge from wood\r\n" +
-                                "=>\r\n" +
-                                "    (build lumber-camp) ;Build lumber_camp\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Build lumber_camp Distance more than 10" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-build lumber-camp) ;Can build lumber-camp?" + Environment.NewLine +
+                                "    (dropsite-min-distance wood >= 10) ; Distance 10 ge from wood" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (build lumber-camp) ;Build lumber_camp" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new BuildLumberCamp {
@@ -31,13 +33,13 @@ namespace LibAoe2AISharp.Framework.Tests
         public void BuildLumberCampTest1()
         {
             // Arrange
-            var expectedValue = ";Build lumber_camp up to 10.\r\n" +
-                "(defrule\r\n" +
-                "    (can-build lumber-camp) ;Can build lumber-camp?\r\n" +
-                "    (building-type-count-total lumber-camp < 10) ;Count of lumber-camp\r\n" +
-                "=>\r\n" +
-                "    (build lumber-camp) ;Build lumber_camp\r\n" +
-                ")\r\n";
+            var expectedValue = ";Build lumber_camp up to 10." + Environment.NewLine +
+                "(defrule" + Environment.NewLine +
+                "    (can-build lumber-camp) ;Can build lumber-camp?" + Environment.NewLine +
+                "    (building-type-count-total lumber-camp < 10) ;Count of lumber-camp" + Environment.NewLine +
+                "=>" + Environment.NewLine +
+                "    (build lumber-camp) ;Build lumber_camp" + Environment.NewLine +
+                ")" + Environment.NewLine;
 
             // Act
             var testClass = new BuildLumberCamp(10);

@@ -1,4 +1,6 @@
-﻿using LibAoe2AISharp.Specifications;
+﻿using System;
+
+using LibAoe2AISharp.Specifications;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
@@ -10,13 +12,13 @@ namespace LibAoe2AISharp.Framework.Tests
         public void TrainVillagerTest()
         {
             // Arrange
-            var expectedValue = ";Train villager up to 10\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-train villager) ;Can train villager?\r\n" +
-                                "    (unit-type-count-total villager < 10) ;Check count : unit villager\r\n" +
-                                "=>\r\n" +
-                                "    (train villager) ;Train villager\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Train villager up to 10" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-train villager) ;Can train villager?" + Environment.NewLine +
+                                "    (unit-type-count-total villager < 10) ;Check count : unit villager" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (train villager) ;Train villager" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new TrainVillager(10);
@@ -30,14 +32,14 @@ namespace LibAoe2AISharp.Framework.Tests
         public void TrainVillagerTestAge()
         {
             // Arrange
-            var expectedValue = ";Train villager up to 10 until available next age research.\r\n" +
-                                "(defrule\r\n" +
-                                "    (can-train villager) ;Can train villager?\r\n" +
-                                "    (unit-type-count-total villager < 10) ;Check count : unit villager\r\n" +
-                                "    (not (can-research imperial-age)) ;Can research imperial-age?\r\n" +
-                                "=>\r\n" +
-                                "    (train villager) ;Train villager\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Train villager up to 10 until available next age research." + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (can-train villager) ;Can train villager?" + Environment.NewLine +
+                                "    (unit-type-count-total villager < 10) ;Check count : unit villager" + Environment.NewLine +
+                                "    (not (can-research imperial-age)) ;Can research imperial-age?" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (train villager) ;Train villager" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new TrainVillager(10, age.castle_age);

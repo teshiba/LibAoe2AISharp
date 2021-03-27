@@ -15,7 +15,7 @@ namespace LibAoe2AISharp.Specifications.Tests
             var aiFileData = string.Empty;
 
             var aiFile = new TestAIFileGenerator {
-                PathName = Environment.CurrentDirectory + @"\",
+                PathName = Environment.CurrentDirectory + @"/",
             };
 
             // Act

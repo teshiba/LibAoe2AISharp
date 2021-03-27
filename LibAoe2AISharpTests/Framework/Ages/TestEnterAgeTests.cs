@@ -1,4 +1,6 @@
-﻿using LibAoe2AISharp.Specifications.Tests;
+﻿using System;
+
+using LibAoe2AISharp.Specifications.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
@@ -10,13 +12,13 @@ namespace LibAoe2AISharp.Framework.Tests
         public void EnterAgeTest()
         {
             // Arrange
-            var expectedValue = ";Specifications.Tests.TestEnterAge\r\n" +
-                                "(defrule\r\n" +
-                                "    (true)\r\n" +
-                                "=>\r\n" +
-                                "    (set-goal AgeState Transitioned)\r\n" +
-                                "    (disable-self)\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Specifications.Tests.TestEnterAge" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (true)" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (set-goal AgeState Transitioned)" + Environment.NewLine +
+                                "    (disable-self)" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new TestEnterAge();
