@@ -1,4 +1,6 @@
-﻿using LibAoe2AISharp.Specifications;
+﻿using System;
+
+using LibAoe2AISharp.Specifications;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static LibAoe2AISharp.Specifications.Ope;
 
@@ -11,32 +13,32 @@ namespace LibAoe2AISharp.Framework.Tests
         public void BuildMarketConditionTest()
         {
             // Arrange
-            var expectedValue = ";Build market up to 10.\r\n" +
-                "(defrule\r\n" +
-                "    (can-build market) ;Can build market?\r\n" +
-                "    (building-type-count-total market < 10) ;Count of market\r\n" +
-                "    (or\r\n" +
-                "        (or\r\n" +
-                "            (and\r\n" +
-                "                (building-type-count-total archery-range >= 2) ;Count of archery-range\r\n" +
-                "                (player-in-game any-ally)\r\n" +
-                "            )\r\n" +
-                "            (and\r\n" +
-                "                (and ;Any ally has market\r\n" +
-                "                    (player-in-game any-ally)\r\n" +
-                "                    (players-building-type-count any-ally market >= 1)\r\n" +
-                "                )\r\n" +
-                "                (building-type-count-total archery-range >= 1) ;Count of archery-range\r\n" +
-                "            )\r\n" +
-                "        )\r\n" +
-                "        (and\r\n" +
-                "            (wood-amount >= 800) ;wood-amount\r\n" +
-                "            (building-type-count-total archery-range >= 2) ;Count of archery-range\r\n" +
-                "        )\r\n" +
-                "    )\r\n" +
-                "=>\r\n" +
-                "    (build market) ;Build market\r\n" +
-                ")\r\n";
+            var expectedValue = ";Build market up to 10." + Environment.NewLine +
+                "(defrule" + Environment.NewLine +
+                "    (can-build market) ;Can build market?" + Environment.NewLine +
+                "    (building-type-count-total market < 10) ;Count of market" + Environment.NewLine +
+                "    (or" + Environment.NewLine +
+                "        (or" + Environment.NewLine +
+                "            (and" + Environment.NewLine +
+                "                (building-type-count-total archery-range >= 2) ;Count of archery-range" + Environment.NewLine +
+                "                (player-in-game any-ally)" + Environment.NewLine +
+                "            )" + Environment.NewLine +
+                "            (and" + Environment.NewLine +
+                "                (and ;Any ally has market" + Environment.NewLine +
+                "                    (player-in-game any-ally)" + Environment.NewLine +
+                "                    (players-building-type-count any-ally market >= 1)" + Environment.NewLine +
+                "                )" + Environment.NewLine +
+                "                (building-type-count-total archery-range >= 1) ;Count of archery-range" + Environment.NewLine +
+                "            )" + Environment.NewLine +
+                "        )" + Environment.NewLine +
+                "        (and" + Environment.NewLine +
+                "            (wood-amount >= 800) ;wood-amount" + Environment.NewLine +
+                "            (building-type-count-total archery-range >= 2) ;Count of archery-range" + Environment.NewLine +
+                "        )" + Environment.NewLine +
+                "    )" + Environment.NewLine +
+                "=>" + Environment.NewLine +
+                "    (build market) ;Build market" + Environment.NewLine +
+                ")" + Environment.NewLine;
 
             // Act
             var testClass = new BuildMarketCondition(10) {

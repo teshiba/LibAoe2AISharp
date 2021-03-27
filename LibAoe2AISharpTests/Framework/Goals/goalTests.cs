@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LibAoe2AISharp.Framework.Tests
 {
     [TestClass]
-    public class goalTests
+    public class GoalTests
     {
         [TestMethod]
-        public void goalTest()
+        public void GoalTest()
         {
             // Arrange
             var flag = BindingFlags.NonPublic | BindingFlags.Static;

@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LibAoe2AISharp.Framework.Tests
 {
@@ -10,13 +12,13 @@ namespace LibAoe2AISharp.Framework.Tests
         {
             // Arrange
             var expVal = 
-                ";Framework.BoarInit\r\n" + 
-                "(defrule\r\n" + 
-                "    (true)\r\n" + 
-                "=>\r\n" + 
-                "    (set-goal BoarState BoarInit)\r\n" + 
-                "    (disable-self)\r\n" + 
-                ")\r\n";
+                ";Framework.BoarInit" + Environment.NewLine + 
+                "(defrule" + Environment.NewLine + 
+                "    (true)" + Environment.NewLine + 
+                "=>" + Environment.NewLine + 
+                "    (set-goal BoarState BoarInit)" + Environment.NewLine + 
+                "    (disable-self)" + Environment.NewLine + 
+                ")" + Environment.NewLine;
 
             // Act
             var testClass = new BoarInit();

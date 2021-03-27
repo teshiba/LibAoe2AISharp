@@ -12,15 +12,15 @@ namespace LibAoe2AISharp.Framework.Tests
         public void ResourceAmountTest()
         {
             // Arrange
-            var expectedValue = "(and\r\n" +
-                                "    (and\r\n" +
-                                "        (and\r\n" +
-                                "            (food-amount >= 25) ;food_amount skirmisher_line,\r\n" +
-                                "            (wood-amount >= 410) ;wood_amount town_center, skirmisher_line, trade_cart,\r\n" +
-                                "        )\r\n" +
-                                "        (gold-amount >= 50) ;gold_amount trade_cart,\r\n" +
-                                "    )\r\n" +
-                                "    (stone-amount >= 100) ;stone_amount town_center,\r\n" +
+            var expectedValue = "(and" + Environment.NewLine +
+                                "    (and" + Environment.NewLine +
+                                "        (and" + Environment.NewLine +
+                                "            (food-amount >= 25) ;food_amount skirmisher_line," + Environment.NewLine +
+                                "            (wood-amount >= 410) ;wood_amount town_center, skirmisher_line, trade_cart," + Environment.NewLine +
+                                "        )" + Environment.NewLine +
+                                "        (gold-amount >= 50) ;gold_amount trade_cart," + Environment.NewLine +
+                                "    )" + Environment.NewLine +
+                                "    (stone-amount >= 100) ;stone_amount town_center," + Environment.NewLine +
                                 ")";
 
             // Act
@@ -39,9 +39,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void ResourceAmountTestNoFoodGold()
         {
             // Arrange
-            var expectedValue = "(and\r\n" +
-                                "    (wood-amount >= 275) ;wood_amount town_center,\r\n" +
-                                "    (stone-amount >= 100) ;stone_amount town_center,\r\n" +
+            var expectedValue = "(and" + Environment.NewLine +
+                                "    (wood-amount >= 275) ;wood_amount town_center," + Environment.NewLine +
+                                "    (stone-amount >= 100) ;stone_amount town_center," + Environment.NewLine +
                                 ")";
 
             // Act
@@ -57,9 +57,9 @@ namespace LibAoe2AISharp.Framework.Tests
         public void ResourceAmountTestNoWoodStone()
         {
             // Arrange
-            var expectedValue = "(and\r\n" +
-                                "    (food-amount >= 60) ;food_amount knight,\r\n" +
-                                "    (gold-amount >= 75) ;gold_amount knight,\r\n" +
+            var expectedValue = "(and" + Environment.NewLine +
+                                "    (food-amount >= 60) ;food_amount knight," + Environment.NewLine +
+                                "    (gold-amount >= 75) ;gold_amount knight," + Environment.NewLine +
                                 ")";
 
             // Act

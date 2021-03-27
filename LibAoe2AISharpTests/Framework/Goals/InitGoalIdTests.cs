@@ -15,13 +15,13 @@ namespace LibAoe2AISharp.Framework.Tests
             typeof(GoalId).GetField("count", flag).SetValue(null, 0);
             typeof(GoalValue).GetField("count", flag).SetValue(null, 0);
 
-            var expectedValue = ";Initialize goal ID parameters\r\n" +
-                                "(defrule\r\n" +
-                                "    (true)\r\n" +
-                                "=>\r\n" +
-                                "    (set-goal AgeState Transitioned)\r\n" +
-                                "    (disable-self)\r\n" +
-                                ")\r\n";
+            var expectedValue = ";Initialize goal ID parameters" + Environment.NewLine +
+                                "(defrule" + Environment.NewLine +
+                                "    (true)" + Environment.NewLine +
+                                "=>" + Environment.NewLine +
+                                "    (set-goal AgeState Transitioned)" + Environment.NewLine +
+                                "    (disable-self)" + Environment.NewLine +
+                                ")" + Environment.NewLine;
 
             // Act
             var testClass = new InitGoalId();
