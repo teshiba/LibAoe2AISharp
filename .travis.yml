@@ -5,3 +5,7 @@ solution: LibAoe2AISharp.sln
 script:
   - dotnet restore
   - dotnet test
+branches:
+  only:
+  - main
+  - travis
