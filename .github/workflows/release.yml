@@ -1,0 +1,32 @@
+name: github package release
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: Pack
+      run: dotnet pack LibAoe2AISharp.csproj -o artifacts/
+    - uses: actions/upload-artifact@v1
+      with:
+        name: artifacts
+        path: artifacts
+    - name: Publish to GitHub Packages
+      run: |
+        dotnet nuget add source "https://nuget.pkg.github.com/teshiba/index.json" -n "github" -u teshiba -p ${{secrets.GH_PACKAGES_PAT}} --store-password-in-clear-text
+        dotnet nuget push "*.nupkg" --api-key ${{secrets.GH_PACKAGES_PAT}} --source "github" --skip-duplicate
