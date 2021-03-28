@@ -92,7 +92,7 @@
         /// <returns>ai script.</returns>
         public virtual string ToScript(int indentLevel)
         {
-            ConstantName = ConstantName ?? GetType().Name;
+            ConstantName ??= GetType().Name;
             return Script.Tab(indentLevel) + Script.Format("defconst", Comment, ConstantName, Value);
         }
 

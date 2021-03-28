@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using LibAoe2AISharp.Specifications;
-
-using static LibAoe2AISharp.Specifications.Ope;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.IO;
+    using LibAoe2AISharp.Specifications;
+    using static LibAoe2AISharp.Specifications.Ope;
+
     /// <summary>
     /// standard AI file.
     /// </summary>
@@ -25,7 +24,7 @@ namespace LibAoe2AISharp.Framework
 
             // Add related files.
             foreach (var item in relatedFiles) {
-                item.Author = item.Author ?? author;
+                item.Author ??= author;
                 item.ParentFile = this;
                 RelatedFiles.Add(item);
 

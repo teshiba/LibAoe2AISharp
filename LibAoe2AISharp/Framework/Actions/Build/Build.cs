@@ -1,9 +1,9 @@
-﻿using LibAoe2AISharp.Specifications;
-using LibAoe2AISharp.Utilty;
-using static LibAoe2AISharp.Specifications.Ope;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using LibAoe2AISharp.Specifications;
+    using LibAoe2AISharp.Utilty;
+    using static LibAoe2AISharp.Specifications.Ope;
+
     /// <summary>
     /// Confirm that the building can be built with "can_build" then build the building with "build".
     /// <para>(<see cref="defrule"/> (<see cref="can_build"/>(<see cref="building"/>)) => (<see cref="build"/>(<see cref="building"/>))).</para>

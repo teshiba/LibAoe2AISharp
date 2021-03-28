@@ -1,8 +1,8 @@
-﻿using System;
-using LibAoe2AISharp.Specifications;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System;
+    using LibAoe2AISharp.Specifications;
+
     /// <summary>
     /// Collection of gatherer rate action.
     /// </summary>

@@ -36,12 +36,12 @@ namespace LibAoe2AISharp.Framework.Tests
         [TestMethod]
         public void ResearchAgeTestArgumentOutOfRangeException()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
             {
                 _ = new ResearchAge(age.dark_age);
             });
 
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
             {
                 _ = new ResearchAge(age.dark_age - 1);
             });

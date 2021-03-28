@@ -1,10 +1,10 @@
-﻿using System;
-using System.Linq;
-using static LibAoe2AISharp.Specifications.Ope;
-using static LibAoe2AISharp.Specifications.Script;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using System.Linq;
+    using static LibAoe2AISharp.Specifications.Ope;
+    using static LibAoe2AISharp.Specifications.Script;
+
     /// <summary>
     /// Collection of Fact command.
     /// </summary>
@@ -33,18 +33,18 @@ namespace LibAoe2AISharp.Specifications
         /// <summary>
         /// Add a Condition to collection.
         /// </summary>
-        /// <param name="condition">command.</param>
-        public override void Add(ICondition condition)
+        /// <param name="command">command.</param>
+        public override void Add(ICondition command)
         {
             // Shrink the first "and" operator, if item is Conditios.
-            var cond = condition as Conditions;
+            var cond = command as Conditions;
             if (cond?.Ope == Logical.And) {
                 base.Add(cond.Condition1);
                 if (cond.Condition2 != null) {
                     base.Add(cond.Condition2);
                 }
             } else {
-                base.Add(condition);
+                base.Add(command);
             }
         }
 

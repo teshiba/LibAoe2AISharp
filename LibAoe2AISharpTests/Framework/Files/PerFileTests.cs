@@ -55,7 +55,7 @@ namespace LibAoe2AISharp.Framework.Tests
         [TestMethod]
         public void ParentFileSetSelfFiel()
         {
-            Assert.ThrowsException<InvalidOperationException>(() =>
+            _ = Assert.ThrowsException<InvalidOperationException>(() =>
             {
                 var testClass = new TestPerFile();
                 testClass.ParentFile = testClass;

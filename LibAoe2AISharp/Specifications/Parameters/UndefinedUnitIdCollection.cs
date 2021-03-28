@@ -1,141 +1,138 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
     /// <summary>
     /// Define system undefined unit IDs.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1629:Documentation text should end with a period", Justification = "<list>")]
     public class UndefinedUnitIdCollection : DefconstCollection
     {
         /// <summary>
-        /// ShepherdMan : 羊を狩る人(男)
+        /// ShepherdMan : 羊を狩る人(男).
         /// </summary>
-        public static readonly defconst ShepherdMan = new defconst(592);
+        public static readonly defconst ShepherdMan = new (592);
 
         /// <summary>
-        /// ShepherdWoman : 羊を狩る人(女)
+        /// ShepherdWoman : 羊を狩る人(女).
         /// </summary>
-        public static readonly defconst ShepherdWoman = new defconst(590);
+        public static readonly defconst ShepherdWoman = new (590);
 
         /// <summary>
-        /// HarvesterMan : 苺を採る人(男)
+        /// HarvesterMan : 苺を採る人(男).
         /// </summary>
-        public static readonly defconst HarvesterMan = new defconst(120);
+        public static readonly defconst HarvesterMan = new (120);
 
         /// <summary>
-        /// HarvesterWoman : 苺を採る人(女)
+        /// HarvesterWoman : 苺を採る人(女).
         /// </summary>
-        public static readonly defconst HarvesterWoman = new defconst(354);
+        public static readonly defconst HarvesterWoman = new (354);
 
         /// <summary>
-        /// HunterMan : 狩りをする人(男)
+        /// HunterMan : 狩りをする人(男).
         /// </summary>
-        public static readonly defconst HunterMan = new defconst(122);
+        public static readonly defconst HunterMan = new (122);
 
         /// <summary>
-        /// HunterWoman : 狩りをする人(女)
+        /// HunterWoman : 狩りをする人(女).
         /// </summary>
-        public static readonly defconst HunterWoman = new defconst(216);
+        public static readonly defconst HunterWoman = new (216);
 
         /// <summary>
-        /// FisherMan : 漁をする人(男)
+        /// FisherMan : 漁をする人(男).
         /// </summary>
-        public static readonly defconst FisherMan = new defconst(56);
+        public static readonly defconst FisherMan = new (56);
 
         /// <summary>
-        /// FisherWoman : 漁をする人(女)
+        /// FisherWoman : 漁をする人(女).
         /// </summary>
-        public static readonly defconst FisherWoman = new defconst(57);
+        public static readonly defconst FisherWoman = new (57);
 
         /// <summary>
-        /// FarmerMan : 耕す人(男)
+        /// FarmerMan : 耕す人(男).
         /// </summary>
-        public static readonly defconst FarmerMan = new defconst(214);
+        public static readonly defconst FarmerMan = new (214);
 
         /// <summary>
-        /// FarmerWoman : 耕す人(女)
+        /// FarmerWoman : 耕す人(女).
         /// </summary>
-        public static readonly defconst FarmerWoman = new defconst(259);
+        public static readonly defconst FarmerWoman = new (259);
 
         /// <summary>
-        /// LumberjackMan : 木を切る人(男)
+        /// LumberjackMan : 木を切る人(男).
         /// </summary>
-        public static readonly defconst LumberjackMan = new defconst(123);
+        public static readonly defconst LumberjackMan = new (123);
 
         /// <summary>
-        /// LumberjackWoman : 木を切る人(女)
+        /// LumberjackWoman : 木を切る人(女).
         /// </summary>
-        public static readonly defconst LumberjackWoman = new defconst(218);
+        public static readonly defconst LumberjackWoman = new (218);
 
         /// <summary>
-        /// GoldMinerMan : 金を掘る人(男)
+        /// GoldMinerMan : 金を掘る人(男).
         /// </summary>
-        public static readonly defconst GoldMinerMan = new defconst(579);
+        public static readonly defconst GoldMinerMan = new (579);
 
         /// <summary>
-        /// GoldMinerWoman : 金を掘る人(女)
+        /// GoldMinerWoman : 金を掘る人(女).
         /// </summary>
-        public static readonly defconst GoldMinerWoman = new defconst(581);
+        public static readonly defconst GoldMinerWoman = new (581);
 
         /// <summary>
-        /// StoneMinerMan : 石を掘る人(男)
+        /// StoneMinerMan : 石を掘る人(男).
         /// </summary>
-        public static readonly defconst StoneMinerMan = new defconst(124);
+        public static readonly defconst StoneMinerMan = new (124);
 
         /// <summary>
-        /// StoneMinerWoman : 石を掘る人(女)
+        /// StoneMinerWoman : 石を掘る人(女).
         /// </summary>
-        public static readonly defconst StoneMinerWoman = new defconst(220);
+        public static readonly defconst StoneMinerWoman = new (220);
 
         /// <summary>
-        /// BuilderMan : 建築する人(男)
+        /// BuilderMan : 建築する人(男).
         /// </summary>
-        public static readonly defconst BuilderMan = new defconst(118);
+        public static readonly defconst BuilderMan = new (118);
 
         /// <summary>
-        /// BuilderWoman : 建築する人(女)
+        /// BuilderWoman : 建築する人(女).
         /// </summary>
-        public static readonly defconst BuilderWoman = new defconst(212);
+        public static readonly defconst BuilderWoman = new (212);
 
         /// <summary>
-        /// RepairMan : 補修する人(男)
+        /// RepairMan : 補修する人(男).
         /// </summary>
-        public static readonly defconst RepairMan = new defconst(156);
+        public static readonly defconst RepairMan = new (156);
 
         /// <summary>
-        /// RepairWoman : 補修する人(女)
+        /// RepairWoman : 補修する人(女).
         /// </summary>
-        public static readonly defconst RepairWoman = new defconst(222);
+        public static readonly defconst RepairWoman = new (222);
 
         /// <summary>
-        /// WaitingMan : 待機中の人(男)
+        /// WaitingMan : 待機中の人(男).
         /// </summary>
-        public static readonly defconst WaitingMan = new defconst(83);
+        public static readonly defconst WaitingMan = new (83);
 
         /// <summary>
-        /// WaitingWoman : 待機中の人(女)
+        /// WaitingWoman : 待機中の人(女).
         /// </summary>
-        public static readonly defconst WaitingWoman = new defconst(293);
+        public static readonly defconst WaitingWoman = new (293);
 
         /// <summary>
-        /// Sheep : 自分の生きている羊
+        /// Sheep : 自分の生きている羊.
         /// </summary>
-        public static readonly defconst Sheep = new defconst(594);
+        public static readonly defconst Sheep = new (594);
 
         /// <summary>
-        /// InfantryGroup : 歩兵グループ
+        /// InfantryGroup : 歩兵グループ.
         /// </summary>
-        public static readonly defconst InfantryGroup = new defconst(906);
+        public static readonly defconst InfantryGroup = new (906);
 
         /// <summary>
-        /// ArcherGroup : 射手グループ
+        /// ArcherGroup : 射手グループ.
         /// </summary>
-        public static readonly defconst ArcherGroup = new defconst(900);
+        public static readonly defconst ArcherGroup = new (900);
 
         /// <summary>
-        /// CavalryGroup : 騎兵グループ
+        /// CavalryGroup : 騎兵グループ.
         /// </summary>
-        public static readonly defconst CavalryGroup = new defconst(912);
+        public static readonly defconst CavalryGroup = new (912);
     }
 }

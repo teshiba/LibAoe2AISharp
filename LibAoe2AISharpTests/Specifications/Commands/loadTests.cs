@@ -9,7 +9,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void loadTest()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
             {
                 _ = new load("file name contained space is trhow exception");
             });

@@ -1,8 +1,8 @@
-﻿using LibAoe2AISharp.Specifications;
-using static LibAoe2AISharp.Framework.AgeStateCollection;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using LibAoe2AISharp.Specifications;
+    using static LibAoe2AISharp.Framework.AgeStateCollection;
+
     /// <summary>
     /// Initialize goal ID parameters.
     /// </summary>

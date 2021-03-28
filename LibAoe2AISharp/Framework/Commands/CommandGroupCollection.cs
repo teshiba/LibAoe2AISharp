@@ -1,7 +1,7 @@
-﻿using System.Collections.ObjectModel;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System.Collections.ObjectModel;
+
     /// <summary>
     /// Collection of CommandCollection.
     /// </summary>

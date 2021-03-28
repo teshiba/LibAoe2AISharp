@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace LibAoe2AISharp.Utilty
+﻿namespace LibAoe2AISharp.Utilty
 {
+    using System;
+    using System.Collections.Generic;
+
     /// <summary>
     /// Dictionary of AOE2's keyword.
     /// </summary>
     /// <remarks>
     /// This dictionary is not fully translated yet.
     /// </remarks>
-    public static class KeywordDictionary
+    public static class LanguageConverter
     {
         private static readonly Dictionary<LocalLang, Dictionary<string, string>> DictionaryList
-            = new Dictionary<LocalLang, Dictionary<string, string>>() {
+            = new () {
                 { LocalLang.English, null },
-                { LocalLang.Japanese, JapaneseDictionary.List },
+                { LocalLang.Japanese, JapaneseWordList.List },
                 { LocalLang.Non, null },
             };
 
@@ -62,7 +62,7 @@ namespace LibAoe2AISharp.Utilty
         public static string ToLocalLang(this object word)
         {
             if (word == null) {
-                throw new NullReferenceException();
+                throw new ArgumentNullException(nameof(word));
             }
 
             string ret = word.ToString();

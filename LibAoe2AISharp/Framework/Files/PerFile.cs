@@ -1,10 +1,10 @@
-﻿using System;
-using System.Diagnostics;
-using System.Globalization;
-using LibAoe2AISharp.Specifications;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System;
+    using System.Diagnostics;
+    using System.Globalization;
+    using LibAoe2AISharp.Specifications;
+
     /// <summary>
     /// standard .per file.
     /// </summary>
@@ -47,13 +47,7 @@ namespace LibAoe2AISharp.Framework
         public PerFile ParentFile
         {
             get => parentFile;
-            set {
-                if (value == this) {
-                    throw new InvalidOperationException();
-                } else {
-                    parentFile = value;
-                }
-            }
+            set => parentFile = value == this ? throw new InvalidOperationException() : value;
         }
 
         /// <summary>

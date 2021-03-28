@@ -1,7 +1,7 @@
-﻿using static LibAoe2AISharp.Specifications.Ope;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using static LibAoe2AISharp.Specifications.Ope;
+
     /// <summary>
     /// This fact checks the given player's unit count.
     /// The computer player relies only on what it has seen no cheating.

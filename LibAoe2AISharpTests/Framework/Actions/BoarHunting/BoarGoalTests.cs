@@ -12,8 +12,8 @@ namespace LibAoe2AISharp.Framework.Tests
         public void BoarGoalTest()
         {
             // Arrange
-            var BindingAttr = BindingFlags.NonPublic | BindingFlags.Static;
-            var goalVal = (int)typeof(BoarGoal).GetField("count", BindingAttr).GetValue(null);
+            var bindingAttr = BindingFlags.NonPublic | BindingFlags.Static;
+            var goalVal = (int)typeof(BoarGoal).GetField("count", bindingAttr).GetValue(null);
             var expVal = $"(defconst BoarTestState {goalVal}) ;goal-id value[{goalVal}] [Boar]test comment";
 
             // Act

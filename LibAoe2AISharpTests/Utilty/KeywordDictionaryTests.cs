@@ -12,9 +12,9 @@ namespace LibAoe2AISharp.Utilty.Tests
             // Arrange
 
             // Act
-            KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.English);
-            KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.Japanese);
-            KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.Non);
+            LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.English);
+            LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.Japanese);
+            LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.Non);
 
             // Assert
         }
@@ -22,13 +22,13 @@ namespace LibAoe2AISharp.Utilty.Tests
         [TestMethod]
         public void SetLocalLangTestArgumentOutOfRangeException()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
             {
-                KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.Non + 1);
+                LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.Non + 1);
             });
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
             {
-                KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.English - 1);
+                LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.English - 1);
             });
         }
 
@@ -36,7 +36,7 @@ namespace LibAoe2AISharp.Utilty.Tests
         public void ToLocalLangTest()
         {
             // Arrange
-            KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.Japanese);
+            LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.Japanese);
             string target = "dark_age";
 
             // Act
@@ -46,14 +46,14 @@ namespace LibAoe2AISharp.Utilty.Tests
             Assert.AreEqual(expectedValue, "暗黒の時代");
 
             // After
-            KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.Non);
+            LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.Non);
         }
 
         [TestMethod]
         public void ToLocalLangTestUndefinedKeyword()
         {
             // Arrange
-            KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.Japanese);
+            LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.Japanese);
             string target = "Undefined dummy key word !!!";
             var expectedValue = target;
 
@@ -64,14 +64,14 @@ namespace LibAoe2AISharp.Utilty.Tests
             Assert.AreEqual(expectedValue, actualValue);
 
             // After
-            KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.Non);
+            LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.Non);
         }
 
         [TestMethod]
         public void ToLocalLangTestNonDictionary()
         {
             // Arrange
-            KeywordDictionary.SetLocalLang(KeywordDictionary.LocalLang.Non);
+            LanguageConverter.SetLocalLang(LanguageConverter.LocalLang.Non);
             string target = "dark_age";
 
             // Act
@@ -88,7 +88,7 @@ namespace LibAoe2AISharp.Utilty.Tests
             string target = null;
 
             // Assert
-            Assert.ThrowsException<NullReferenceException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 _ = target.ToLocalLang();
             });

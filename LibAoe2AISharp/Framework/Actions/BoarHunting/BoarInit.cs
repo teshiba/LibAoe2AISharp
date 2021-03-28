@@ -1,8 +1,8 @@
-﻿using LibAoe2AISharp.Specifications;
-using static LibAoe2AISharp.Framework.BoarHuntingCommandCollection;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using LibAoe2AISharp.Specifications;
+    using static LibAoe2AISharp.Framework.BoarHuntingCommandCollection;
+
     /// <summary>
     /// Initialize boar hunting.
     /// </summary>

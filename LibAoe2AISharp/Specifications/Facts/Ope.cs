@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System.Collections.Generic;
+
     /// <summary>
     /// Operator definitions.
     /// </summary>
     public static class Ope
     {
         private static readonly Dictionary<relop, string> OperatorList
-            = new Dictionary<relop, string> {
+            = new () {
                 { relop.less_than, "less-than" },
                 { relop.less_or_equal, "less-or-equal" },
                 { relop.greater_than, "greater-than" },

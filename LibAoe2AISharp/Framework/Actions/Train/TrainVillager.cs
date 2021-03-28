@@ -1,7 +1,7 @@
-﻿using LibAoe2AISharp.Specifications;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using LibAoe2AISharp.Specifications;
+
     /// <summary>
     /// Train villagers.
     /// </summary>

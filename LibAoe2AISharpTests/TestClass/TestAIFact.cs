@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LibAoe2AISharp.Specifications.Tests
+﻿namespace LibAoe2AISharp.Specifications.Tests
 {
     internal class TestAIFact : AIFact
     {

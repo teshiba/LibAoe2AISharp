@@ -9,7 +9,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void defconstTestException()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
             {
                 // constantName needs strings without space.
                 _ = new defconst("test constant name", 1);

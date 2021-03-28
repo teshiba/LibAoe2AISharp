@@ -66,7 +66,7 @@ namespace LibAoe2AISharp.Framework.Tests
         [TestMethod]
         public void GathererRateTestArgumentNullException()
         {
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 _ = new GathererRate(null);
             });

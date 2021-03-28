@@ -53,16 +53,16 @@ namespace LibAoe2AISharp.Framework.Tests
             typeof(GoalId).GetField("count", flag).SetValue(null, 0);
             typeof(GoalValue).GetField("count", flag).SetValue(null, 0);
 
-            Collection<GoalId> classList = new Collection<GoalId>();
+            Collection<GoalId> classList = new ();
             for (int i = 0; i < Limit.GoalIdMax; i++) {
                 classList.Add(new GoalId("goalIdConstName", "goal id comment"));
             }
 
             // Act
-            Assert.ThrowsException<IndexOutOfRangeException>(() =>
-            {
-                classList.Add(new GoalId("goalIdConstName", "goal id comment"));
-            });
+            _ = Assert.ThrowsException<OverflowException>(() =>
+              {
+                  classList.Add(new GoalId("goalIdConstName", "goal id comment"));
+              });
         }
     }
 }

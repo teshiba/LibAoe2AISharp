@@ -1,7 +1,7 @@
-﻿using LibAoe2AISharp.Utilty;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using LibAoe2AISharp.Utilty;
+
     /// <summary>
     /// This action sets a given strategic number to a given value.
     /// <para>

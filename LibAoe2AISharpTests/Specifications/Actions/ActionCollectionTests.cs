@@ -35,7 +35,7 @@ namespace LibAoe2AISharp.Specifications.Tests
                 Assert.AreEqual(list[i], actionArray[i]);
             }
 
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 list.Add((ICommand[])null);
             });
@@ -60,9 +60,9 @@ namespace LibAoe2AISharp.Specifications.Tests
             // Assert
             Assert.AreEqual(expectedScript, actualScript);
 
-            Assert.ThrowsException<InvalidOperationException>(() =>
+            _ = Assert.ThrowsException<InvalidOperationException>(() =>
             {
-                new ActionCollection().ToScript();
+                _ = new ActionCollection().ToScript();
             });
         }
     }
