@@ -4,7 +4,12 @@ dotnet: 3.1.407
 solution: LibAoe2AISharp.sln
 script:
   - dotnet restore
-  - dotnet test
+  - dotnet test --collect:"XPlat Code Coverage" > test.log
+  - COVERAGE_RESULT=`cat test.log | grep coverage.cobertura.xml`
+  - CODECOV_TOKEN = '43702051-c220-4b27-92e6-bb108198b608'
+  - curl -s https://codecov.io/bash > codecov
+  - chmod +x codecov
+  - ./codecov -f $COVERAGE_RESULT -t $CODECOV_TOKEN
 branches:
   only:
   - main
