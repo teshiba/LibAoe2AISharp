@@ -6,7 +6,7 @@
     public class research_completed : AIFact
     {
         private readonly ri researchItem;
-        private readonly bool isResearchItemEnum = false;
+        private readonly bool isResearchItemEnum;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="research_completed"/> class.

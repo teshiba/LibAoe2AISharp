@@ -94,16 +94,16 @@ namespace LibAoe2AISharp.Framework.Tests
         [TestMethod]
         public void SetCommonFactsTestArgumentOutOfRangeException()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
-            {
-                _ = new EachAgesCommandCollection(CastleAge, ResearchState.Finished - 1, "comment");
-            });
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+              {
+                  _ = new EachAgesCommandCollection(CastleAge, ResearchState.Finished - 1, "comment");
+              });
         }
 
         [TestMethod]
         public void GetTransitionstringTestArgumentOutOfRangeException()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
             {
                 _ = new EachAgesCommandCollection(AllAges, ResearchState.Finished - 1, "comment");
             });

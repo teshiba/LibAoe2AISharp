@@ -1,7 +1,7 @@
-﻿using static LibAoe2AISharp.Specifications.Script;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using static LibAoe2AISharp.Specifications.Script;
+
     /// <summary>
     /// Abstract class for implement Action command.
     /// </summary>

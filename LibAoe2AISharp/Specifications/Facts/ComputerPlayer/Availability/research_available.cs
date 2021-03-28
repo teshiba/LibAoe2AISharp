@@ -1,8 +1,8 @@
-﻿using System;
-using LibAoe2AISharp.Utilty;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using LibAoe2AISharp.Utilty;
+
     /// <summary>
     /// The fact checks that the given research is available to the computer player's civ, and
     /// that the research is available at this time (tech tree prerequisites are met).
@@ -11,7 +11,7 @@ namespace LibAoe2AISharp.Specifications
     public class research_available : AIFact
     {
         private readonly Enum researchItem;
-        private readonly bool isResearchItemEnum = false;
+        private readonly bool isResearchItemEnum;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="research_available"/> class.

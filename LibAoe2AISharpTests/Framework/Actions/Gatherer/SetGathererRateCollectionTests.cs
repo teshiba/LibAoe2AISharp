@@ -43,7 +43,7 @@ namespace LibAoe2AISharp.Framework.Tests
         [TestMethod]
         public void SetGathererRateCollectionTestArgumentNullException()
         {
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 _ = new SetGathererRateCollection(null);
             });

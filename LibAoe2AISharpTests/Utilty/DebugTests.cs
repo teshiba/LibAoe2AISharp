@@ -25,7 +25,7 @@ namespace LibAoe2AISharp.Utilty.Tests
             Debug.ChatToAll = chatToAll;
             Debug.DeveloperChatLocalToSelf = developerChatLocalToSelf;
 
-            Debug debugAction = new Debug();
+            Debug debugAction = new ();
             var className = "testClassName";
             var debugMessage = "debug test message";
             var expectedScript = string.Empty;

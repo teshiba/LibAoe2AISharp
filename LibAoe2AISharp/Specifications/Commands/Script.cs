@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+
     /// <summary>
     /// AI script formatter.
     /// </summary>

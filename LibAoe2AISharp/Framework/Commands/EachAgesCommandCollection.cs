@@ -1,21 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using LibAoe2AISharp.Specifications;
-using LibAoe2AISharp.Utilty;
-
-using static LibAoe2AISharp.Framework.AgeStateCollection;
-using static LibAoe2AISharp.Framework.EachAgesCommandCollection.GroupType;
-using static LibAoe2AISharp.Specifications.age;
-using static LibAoe2AISharp.Specifications.Ope;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System;
+    using System.Collections.Generic;
+    using LibAoe2AISharp.Specifications;
+    using LibAoe2AISharp.Utilty;
+    using static LibAoe2AISharp.Framework.AgeStateCollection;
+    using static LibAoe2AISharp.Framework.EachAgesCommandCollection.GroupType;
+    using static LibAoe2AISharp.Specifications.age;
+    using static LibAoe2AISharp.Specifications.Ope;
+
     /// <summary>
     /// Define command group that apply to each ages.
     /// </summary>
     public class EachAgesCommandCollection : CommandCollection
     {
-        private static readonly Dictionary<GroupType, AgeCondition> ConditionList = new Dictionary<GroupType, AgeCondition>() {
+        private static readonly Dictionary<GroupType, AgeCondition> ConditionList = new () {
             { AllAges,             new AgeCondition(relop.ne, post_imperial_age) },
             { DarkAge,             new AgeCondition(relop.eq, dark_age) },
             { FeudalAge,           new AgeCondition(relop.eq, feudal_age) },
@@ -99,22 +98,12 @@ namespace LibAoe2AISharp.Framework
 
         private static string GetTransitionstring(ResearchState researchOption, age targetAge)
         {
-            string ret;
-
-            switch (researchOption) {
-            case ResearchState.Finished:
-                ret = targetAge.ToLocalLang();
-                break;
-            case ResearchState.Researching:
-                ret = (targetAge + 1).ToLocalLang();
-                break;
-            case ResearchState.NotResearching:
-                ret = targetAge.ToLocalLang();
-                break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(researchOption));
-            }
-
+            string ret = researchOption switch {
+                ResearchState.Finished => targetAge.ToLocalLang(),
+                ResearchState.Researching => (targetAge + 1).ToLocalLang(),
+                ResearchState.NotResearching => targetAge.ToLocalLang(),
+                _ => throw new ArgumentOutOfRangeException(nameof(researchOption)),
+            };
             return ret + " " + researchOption.ToLocalLang();
         }
 

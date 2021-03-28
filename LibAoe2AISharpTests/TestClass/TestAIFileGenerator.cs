@@ -2,7 +2,7 @@
 {
     public class TestAIFileGenerator : AIFileGenerator
     {
-        public override string FileName { get => "TestAIFileGenerator"; }
+        public override string FileName => "TestAIFileGenerator";
 
         public override string PathName { get; set; }
 

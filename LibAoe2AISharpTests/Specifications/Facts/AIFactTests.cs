@@ -19,9 +19,9 @@ namespace LibAoe2AISharp.Specifications.Tests
             // Assert
             Assert.IsTrue(notfact.IsNot);
 
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
-                var notFactNull = !((TestAIFact)null);
+                var notFactNull = !(TestAIFact)null;
             });
         }
 

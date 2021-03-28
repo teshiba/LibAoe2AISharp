@@ -1,12 +1,9 @@
-﻿using System.Collections.ObjectModel;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LibAoe2AISharp.Specifications.Tests
+﻿namespace LibAoe2AISharp.Specifications.Tests
 {
     public class TestActionCollection : ActionCollection
     {
-        private readonly ActionCollection listChild1 = new ActionCollection();
-        private readonly ActionCollection listChild2 = new ActionCollection();
+        private readonly ActionCollection listChild1 = new ();
+        private readonly ActionCollection listChild2 = new ();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TestActionCollection"/> class.
@@ -19,7 +16,7 @@ namespace LibAoe2AISharp.Specifications.Tests
             Add(listChild2, ActionArray[4], ActionArray[5]);
         }
 
-        private ActionCollection ActionArray { get; } = new ActionCollection()
+        private ActionCollection ActionArray { get; } = new ()
         {
                 new TestAIAction() { Comment = "action0" },
                 new TestAIAction() { Comment = "action1" },

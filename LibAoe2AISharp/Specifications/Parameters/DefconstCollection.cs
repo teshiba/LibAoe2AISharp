@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using LibAoe2AISharp.Utilty;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using LibAoe2AISharp.Utilty;
+
     /// <summary>
     /// Collection of defconst command.
     /// <para>

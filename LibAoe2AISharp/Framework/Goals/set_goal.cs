@@ -1,7 +1,7 @@
-﻿using LibAoe2AISharp.Specifications;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using LibAoe2AISharp.Specifications;
+
     /// <summary>
     /// This action sets a given goal to a given value using defconst defined value.
     /// </summary>

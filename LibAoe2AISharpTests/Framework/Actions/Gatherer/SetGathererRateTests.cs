@@ -150,7 +150,7 @@ namespace LibAoe2AISharp.Framework.Tests
         [TestMethod]
         public void SetGathererRateArgumentNullException()
         {
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 _ = new SetGathererRate(null, null, string.Empty);
             });

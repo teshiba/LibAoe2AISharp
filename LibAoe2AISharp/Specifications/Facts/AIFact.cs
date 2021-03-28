@@ -1,9 +1,9 @@
-﻿using System;
-using static LibAoe2AISharp.Specifications.Ope;
-using static LibAoe2AISharp.Specifications.Script;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using static LibAoe2AISharp.Specifications.Ope;
+    using static LibAoe2AISharp.Specifications.Script;
+
     /// <summary>
     /// Abstract class for implement Fact command.
     /// </summary>

@@ -1,116 +1,115 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System.Diagnostics.CodeAnalysis;
+
     /// <summary>
     /// Define system undefined research IDs.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1629:Documentation text should end with a period", Justification = "<List>")]
     public class UndefinedResearchIdCollection : DefconstCollection
     {
         /// <summary>
-        /// HerbalMedicine : 薬草学
+        /// HerbalMedicine : 薬草学.
         /// </summary>
-        public static readonly defconst HerbalMedicine = new defconst(441);
+        public static readonly defconst HerbalMedicine = new (441);
 
         /// <summary>
-        /// SpiesTreason : 諜報/反逆
+        /// SpiesTreason : 諜報/反逆.
         /// </summary>
-        public static readonly defconst SpiesTreason = new defconst(408);
+        public static readonly defconst SpiesTreason = new (408);
 
         /// <summary>
-        /// GarlandWars : 栄誉戦
+        /// GarlandWars : 栄誉戦.
         /// </summary>
-        public static readonly defconst GarlandWars = new defconst(24);
+        public static readonly defconst GarlandWars = new (24);
 
         /// <summary>
-        /// Logistica : 兵站学
+        /// Logistica : 兵站学.
         /// </summary>
-        public static readonly defconst Logistica = new defconst(61);
+        public static readonly defconst Logistica = new (61);
 
         /// <summary>
-        /// FurorCeltica : ケルトの怒り
+        /// FurorCeltica : ケルトの怒り.
         /// </summary>
-        public static readonly defconst FurorCeltica = new defconst(5);
+        public static readonly defconst FurorCeltica = new (5);
 
         /// <summary>
-        /// Rocketry : 砲弾術
+        /// Rocketry : 砲弾術.
         /// </summary>
-        public static readonly defconst Rocketry = new defconst(52);
+        public static readonly defconst Rocketry = new (52);
 
         /// <summary>
-        /// Yeomen : ヨーマン
+        /// Yeomen : ヨーマン.
         /// </summary>
-        public static readonly defconst Yeomen = new defconst(3);
+        public static readonly defconst Yeomen = new (3);
 
         /// <summary>
-        /// BeardedAxe : ビアードアックス
+        /// BeardedAxe : ビアードアックス.
         /// </summary>
-        public static readonly defconst BeardedAxe = new defconst(83);
+        public static readonly defconst BeardedAxe = new (83);
 
         /// <summary>
-        /// Anarchy : 無秩序
+        /// Anarchy : 無秩序.
         /// </summary>
-        public static readonly defconst Anarchy = new defconst(16);
+        public static readonly defconst Anarchy = new (16);
 
         /// <summary>
-        /// Perfusion : パーフュージョン
+        /// Perfusion : パーフュージョン.
         /// </summary>
-        public static readonly defconst Perfusion = new defconst(457);
+        public static readonly defconst Perfusion = new (457);
 
         /// <summary>
-        /// Atheism : 無神論
+        /// Atheism : 無神論.
         /// </summary>
-        public static readonly defconst Atheism = new defconst(21);
+        public static readonly defconst Atheism = new (21);
 
         /// <summary>
-        /// Kataparuto : 投擲術
+        /// Kataparuto : 投擲術.
         /// </summary>
-        public static readonly defconst Kataparuto = new defconst(59);
+        public static readonly defconst Kataparuto = new (59);
 
         /// <summary>
-        /// Shinkichon : 新機箭
+        /// Shinkichon : 新機箭.
         /// </summary>
-        public static readonly defconst Shinkichon = new defconst(445);
+        public static readonly defconst Shinkichon = new (445);
 
         /// <summary>
-        /// ElDorado : エルドラド
+        /// ElDorado : エルドラド.
         /// </summary>
-        public static readonly defconst ElDorado = new defconst(4);
+        public static readonly defconst ElDorado = new (4);
 
         /// <summary>
-        /// Drill : 演習
+        /// Drill : 演習.
         /// </summary>
-        public static readonly defconst Drill = new defconst(6);
+        public static readonly defconst Drill = new (6);
 
         /// <summary>
-        /// Mahouts : 象使い
+        /// Mahouts : 象使い.
         /// </summary>
-        public static readonly defconst Mahouts = new defconst(7);
+        public static readonly defconst Mahouts = new (7);
 
         /// <summary>
-        /// Zealotry : 狂信
+        /// Zealotry : 狂信.
         /// </summary>
-        public static readonly defconst Zealotry = new defconst(9);
+        public static readonly defconst Zealotry = new (9);
 
         /// <summary>
-        /// Supremacy : 覇権
+        /// Supremacy : 覇権.
         /// </summary>
-        public static readonly defconst Supremacy = new defconst(440);
+        public static readonly defconst Supremacy = new (440);
 
         /// <summary>
-        /// Crenellations : 銃眼付胸壁
+        /// Crenellations : 銃眼付胸壁.
         /// </summary>
-        public static readonly defconst Crenellations = new defconst(11);
+        public static readonly defconst Crenellations = new (11);
 
         /// <summary>
-        /// Artillery : 砲術
+        /// Artillery : 砲術.
         /// </summary>
-        public static readonly defconst Artillery = new defconst(10);
+        public static readonly defconst Artillery = new (10);
 
         /// <summary>
-        /// Berserkergang : ベルセルクギャング
+        /// Berserkergang : ベルセルクギャング.
         /// </summary>
-        public static readonly defconst Berserkergang = new defconst(49);
+        public static readonly defconst Berserkergang = new (49);
     }
 }

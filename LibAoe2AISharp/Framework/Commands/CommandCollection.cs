@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using LibAoe2AISharp.Specifications;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using LibAoe2AISharp.Specifications;
+
     /// <summary>
     /// Grouping multiple AI script commands.
     /// </summary>
@@ -99,7 +99,7 @@ namespace LibAoe2AISharp.Framework
             // Output group element comments.
             foreach (var item in this) {
                 // Exclude defconst that is output in one line,
-                if (!(item is defconst)) {
+                if (item is not defconst) {
                     headerComment += "; " + item.Comment + Environment.NewLine;
                 }
             }
