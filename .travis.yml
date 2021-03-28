@@ -14,3 +14,23 @@ branches:
   only:
   - main
   - travis
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "T6iiEqVknAOR4s32zd5mfARkN+S15vcwQIIuQa6FQ0Oykuhg17NV3Ai1BAAeY2tfpj5SuIhhxcZjs/u0OZ+CFzKAr1yKQUosdWSWwc4/TXSsrhrMt/TgrwkfThwmmTCTZNxR9djx3zQk4bV6eupGp0unSNoQuddKjNUhL6iUhSTPTbDUo5IPgw/7NbvF+60K4nqWi6YZHA4o1WN3DuzfOiAlZZZ9LD1PsT+g7nUB13ug2HnOdu0cuAyO3QAY0FdTpA3iOiVWMAcnvc7fbsFljwQ51KXd4q2tYuPCUlEX/Sk9Tg1W2fcg93wYLSc4ksVPDFrl8mPwlgs9kbb9MK3ISReUhh/Nd79m5sjNbK3zxsIhspUX6gkXPzw/0sRydf72BaPr7gb5wfIXwpcgcOR9GXtApTUKXI8h2xIzOzauDoVa/rcjldD71TCVy8dm7pRh+3h+OK00WBK9e+vzGJfHIzDl8cWlvIFoBeGXq0DOFj+GOw5Kkzsr0sQzTRECNF7EcNpEln009kjw65QYkGMouY8sJzkEaVQYZI9TAQ49M+mswJNkqU2zbgszl+H8vckQSF9Du6EdlpPaehYPgXRpX9fggLWN5aMExAkpbwrrjbBjb/2iDxxbFOS0zEHf+RG5lUMCQegoSgGVUoJv3BJRmEs9eSUh34l1FycFJQ9VcLY="
+
+before_install:
+  - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+
+addons:
+  coverity_scan:
+    project:
+      name: "teshiba/LibAoe2AISharp"
+      description: "Coverity Scan LibAoe2AISharp"
+    notification_email: teshiba.satoshi@gmail.com
+    build_command_prepend: "dotnet restore"
+    build_command: "dotnet test"
+    branch_pattern: travis
+    
