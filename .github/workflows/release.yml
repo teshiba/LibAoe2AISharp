@@ -18,8 +18,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
     - name: Pack
       run: dotnet pack LibAoe2AISharp.csproj -o artifacts/
     - uses: actions/upload-artifact@v1
