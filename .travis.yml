@@ -6,6 +6,7 @@ script:
   - dotnet restore
   - dotnet test --collect:"XPlat Code Coverage" > test.log
   - COVERAGE_RESULT=`cat test.log | grep coverage.cobertura.xml`
+  - cat test.log
   - CODECOV_TOKEN = '43702051-c220-4b27-92e6-bb108198b608'
   - curl -s https://codecov.io/bash > codecov
   - chmod +x codecov
