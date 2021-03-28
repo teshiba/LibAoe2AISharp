@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibAoe2AISharp", "LibAoe2AISharp\LibAoe2AISharp.csproj", "{71670EB3-3935-4D32-BB3A-97A1D2E80C63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibAoe2AISharp", "LibAoe2AISharp\LibAoe2AISharp.csproj", "{71670EB3-3935-4D32-BB3A-97A1D2E80C63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibAoe2AISharpTests", "LibAoe2AISharpTests\LibAoe2AISharpTests.csproj", "{74FC6397-A2D8-43C5-9659-CA7A89E97182}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibAoe2AISharpTests", "LibAoe2AISharpTests\LibAoe2AISharpTests.csproj", "{74FC6397-A2D8-43C5-9659-CA7A89E97182}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5AA7430A-79F3-4BC3-B099-8ECC2F3D8A1C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

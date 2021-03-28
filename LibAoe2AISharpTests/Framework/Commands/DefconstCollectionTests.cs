@@ -40,7 +40,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         public void GetEnumeratorTestFieldAccessException()
         {
             var instance = new TestDefconstFailCollection();
-            Assert.ThrowsException<FieldAccessException>(() =>
+            _ = Assert.ThrowsException<FieldAccessException>(() =>
             {
                 foreach (var item in instance) {
                 }

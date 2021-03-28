@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using System.Linq;
+
     /// <summary>
     /// Collection of Action command.
     /// </summary>

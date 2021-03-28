@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using LibAoe2AISharp.Specifications;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System;
+    using System.Collections.ObjectModel;
+    using LibAoe2AISharp.Specifications;
+
     /// <summary>
     /// manage goal-id name using defconst.
     /// </summary>
     public class GoalId : defconst
     {
-        private static readonly Collection<GoalId> SelfList = new Collection<GoalId>();
+        private static readonly Collection<GoalId> SelfList = new ();
 
-        private static int count = 0;
+        private static int count;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GoalId"/> class.
@@ -21,7 +21,7 @@ namespace LibAoe2AISharp.Framework
         public GoalId(string constantName, string comment)
         {
             if (count + 1 > Limit.GoalIdMax) {
-                throw new IndexOutOfRangeException();
+                throw new OverflowException($"The number of GoadID is over the max {Limit.GoalIdMax}.");
             }
 
             count++;

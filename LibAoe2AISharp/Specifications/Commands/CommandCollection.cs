@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.ObjectModel;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using System.Collections.ObjectModel;
+
     /// <summary>
     /// command collection abstruct class.
     /// </summary>

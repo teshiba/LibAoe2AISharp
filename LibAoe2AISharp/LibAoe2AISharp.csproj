@@ -18,6 +18,8 @@
     <SignAssembly>false</SignAssembly>
     <Version>0.3.0</Version>
     <PackageReleaseNotes>version 0.3.0</PackageReleaseNotes>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

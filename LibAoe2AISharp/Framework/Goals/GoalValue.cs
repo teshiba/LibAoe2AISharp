@@ -1,13 +1,13 @@
-﻿using LibAoe2AISharp.Specifications;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using LibAoe2AISharp.Specifications;
+
     /// <summary>
     /// Define goal-id value.
     /// </summary>
     public abstract class GoalValue : defconst
     {
-        private static int count = 0;
+        private static int count;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GoalValue"/> class.

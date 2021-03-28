@@ -58,7 +58,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void ConditionsTestICondition3()
         {
-            Assert.ThrowsException<InvalidOperationException>(() =>
+            _ = Assert.ThrowsException<InvalidOperationException>(() =>
             {
                 _ = new Conditions(new UnsuportCondition());
             });
@@ -98,7 +98,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void ConditionsTest2ICondition3()
         {
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 _ = new Conditions(null, new TestAIFact(), Logical.Or);
             });
@@ -107,7 +107,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void ConditionsTest2ICondition4()
         {
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 _ = new Conditions(null, null, Logical.Or);
             });
@@ -151,7 +151,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void ConditionsTestInvalidOperand()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+            _ = Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
             {
                 _ = new Conditions(new TestAIFact(), new TestAIFact(), (Logical)(-1));
             });
@@ -230,7 +230,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void BitwiseOrTestException()
         {
-            Assert.ThrowsException<TypeAccessException>(() =>
+            _ = Assert.ThrowsException<TypeAccessException>(() =>
             {
                 _ = new Conditions(new TestAIFact()) | new UnsuportCondition();
             });
@@ -297,7 +297,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void BitwiseAndTestException()
         {
-            Assert.ThrowsException<TypeAccessException>(() =>
+            _ = Assert.ThrowsException<TypeAccessException>(() =>
             {
                 _ = new Conditions(new TestAIFact()) & new UnsuportCondition();
             });
@@ -306,7 +306,7 @@ namespace LibAoe2AISharp.Specifications.Tests
         [TestMethod]
         public void LogicalNotTestNullArgument()
         {
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 _ = Conditions.LogicalNot(null);
             });
@@ -343,7 +343,7 @@ namespace LibAoe2AISharp.Specifications.Tests
             Assert.AreEqual(Logical.Not, nCondtion5.Ope);
 
             // not(A,B) is Invalid
-            Assert.ThrowsException<InvalidOperationException>(() =>
+            _ = Assert.ThrowsException<InvalidOperationException>(() =>
             {
                 _ = new Conditions(new TestAIFact(), new TestAIFact(), Logical.Not);
             });

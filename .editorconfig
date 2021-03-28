@@ -1,0 +1,22 @@
+﻿# NOTE: Requires **VS2019 16.3** or later
+
+# Microsoft All Rules
+# Description: This rule set contains all rules. Running this rule set may result in a large number of warnings being reported. Use this rule set to get a comprehensive picture of all issues in your code. This can help you decide which of the more focused rule sets are most appropriate to run for your projects.
+
+# Code files
+[*.{cs,vb}]
+
+# SA1101: PrefixLocalCallsWithThis
+dotnet_diagnostic.SA1101.severity = none
+
+# SA1300: ElementMustBeginWithUpperCaseLetter
+dotnet_diagnostic.SA1300.severity = none
+
+# SA1500: BracesForMultiLineStatementsMustNotShareLine
+dotnet_diagnostic.SA1500.severity = none
+
+# SA1633: FileMustHaveHeader
+dotnet_diagnostic.SA1633.severity = none
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none

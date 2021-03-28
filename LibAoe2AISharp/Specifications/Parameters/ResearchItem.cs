@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.ObjectModel;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using System.Collections.ObjectModel;
+
     /// <summary>
     /// Research item utility class.
     /// </summary>
@@ -18,7 +18,7 @@ namespace LibAoe2AISharp.Specifications
         /// <see cref="unit"/>.
         /// </summary>
         private static readonly Collection<string> SystemDefinedConstCollection
-            = new Collection<string>() {
+            = new () {
             // player_number
             "my_player_number",
 

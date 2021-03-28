@@ -2,7 +2,7 @@
 {
     public class TestPerFileGenerator : PerFileGenerator
     {
-        public override string FileName { get => "testScript"; }
+        public override string FileName => "testScript";
 
         public override string PathName { get; set; }
 

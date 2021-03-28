@@ -1,8 +1,8 @@
-﻿using LibAoe2AISharp.Utilty;
-using static LibAoe2AISharp.Specifications.Ope;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using LibAoe2AISharp.Utilty;
+    using static LibAoe2AISharp.Specifications.Ope;
+
     /// <summary>
     /// This fact checks computer player's current age.
     /// </summary>

@@ -51,12 +51,12 @@ namespace LibAoe2AISharp.Specifications.Tests
             facts.Add(andCondition);
             facts.Add(cond);
 
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 facts.Add((Conditions[])null);
             });
 
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 facts.Add((Conditions)null);
             });

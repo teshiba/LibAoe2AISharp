@@ -1,8 +1,8 @@
-﻿using LibAoe2AISharp.Specifications;
-using static LibAoe2AISharp.Framework.ComplexConditions;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using LibAoe2AISharp.Specifications;
+    using static LibAoe2AISharp.Framework.ComplexConditions;
+
     /// <summary>
     /// Build market according to ally conditions.
     /// </summary>

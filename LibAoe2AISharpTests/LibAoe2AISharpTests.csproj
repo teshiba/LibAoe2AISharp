@@ -24,6 +24,14 @@
     <RepositoryType>git</RepositoryType>
 
     <PackageTags>aoe2</PackageTags>
+
+    <Version>0.3.0</Version>
+
+    <OutputType>Library</OutputType>
+
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
   <ItemGroup>

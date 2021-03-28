@@ -1,15 +1,15 @@
-﻿using System;
-using LibAoe2AISharp.Utilty;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using LibAoe2AISharp.Utilty;
+
     /// <summary>
     /// This action researches the given item.
     /// </summary>
     public class research : AIAction
     {
         private readonly Enum researchItem;
-        private readonly bool isResearchItemEnum = false;
+        private readonly bool isResearchItemEnum;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="research"/> class.

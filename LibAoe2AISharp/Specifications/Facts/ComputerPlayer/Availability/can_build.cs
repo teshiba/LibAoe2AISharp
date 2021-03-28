@@ -1,7 +1,7 @@
-﻿using LibAoe2AISharp.Utilty;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using LibAoe2AISharp.Utilty;
+
     /// <summary>
     /// This fact checks whether the computer player can build the given building.
     /// </summary>

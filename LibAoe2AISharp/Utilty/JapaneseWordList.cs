@@ -1,16 +1,16 @@
-﻿using System.Collections.Generic;
-
-namespace LibAoe2AISharp.Utilty
+﻿namespace LibAoe2AISharp.Utilty
 {
+    using System.Collections.Generic;
+
     /// <summary>
     /// Japanese dictionary.
     /// </summary>
-    public static class JapaneseDictionary
+    public static class JapaneseWordList
     {
         /// <summary>
         /// translate class name to Japanese keyword.
         /// </summary>
-        public static readonly Dictionary<string, string> List = new Dictionary<string, string>() {
+        public static readonly Dictionary<string, string> List = new () {
             //////////////////////////////////////////////
             // ages
             //////////////////////////////////////////////

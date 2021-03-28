@@ -1,15 +1,15 @@
-﻿using System;
-using LibAoe2AISharp.Utilty;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using LibAoe2AISharp.Utilty;
+
     /// <summary>
     /// This fact checks if the given research can start.
     /// </summary>
     public class can_research : AIFact
     {
         private readonly Enum researchItem;
-        private readonly bool isResearchItemEnum = false;
+        private readonly bool isResearchItemEnum;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="can_research"/> class.

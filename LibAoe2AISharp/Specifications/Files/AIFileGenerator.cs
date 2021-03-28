@@ -1,7 +1,7 @@
-﻿using System.IO;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System.IO;
+
     /// <summary>
     /// Generate .ai file.
     /// </summary>

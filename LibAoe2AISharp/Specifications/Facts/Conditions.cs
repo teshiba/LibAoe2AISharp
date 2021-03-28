@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using static System.Environment;
-using static LibAoe2AISharp.Specifications.Ope;
-using static LibAoe2AISharp.Specifications.Script;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using System.Collections.Generic;
+    using static System.Environment;
+    using static LibAoe2AISharp.Specifications.Ope;
+    using static LibAoe2AISharp.Specifications.Script;
+
     /// <summary>
     /// Manages two conditions.
     /// </summary>
@@ -212,17 +212,11 @@ namespace LibAoe2AISharp.Specifications
                 }
                 }
 
-                switch (icond) {
-                case null:
-                    ret = new Conditions(true);
-                    break;
-                case FalseFact _:
-                    ret = new Conditions(cond1);
-                    break;
-                default:
-                    ret = new Conditions(cond1, cond2, Logical.Or);
-                    break;
-                }
+                ret = icond switch {
+                    null => new Conditions(true),
+                    FalseFact => new Conditions(cond1),
+                    _ => new Conditions(cond1, cond2, Logical.Or),
+                };
             }
 
             return ret;
@@ -271,17 +265,11 @@ namespace LibAoe2AISharp.Specifications
                 }
                 }
 
-                switch (icond) {
-                case null:
-                    ret = cond1;
-                    break;
-                case FalseFact _:
-                    ret = new Conditions(icond);
-                    break;
-                default:
-                    ret = new Conditions(cond1, cond2, Logical.And);
-                    break;
-                }
+                ret = icond switch {
+                    null => cond1,
+                    FalseFact => new Conditions(icond),
+                    _ => new Conditions(cond1, cond2, Logical.And),
+                };
             }
 
             return ret;

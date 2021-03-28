@@ -133,7 +133,7 @@ namespace LibAoe2AISharp.Framework.Tests
             testClass[0] = null;
 
             // Assert
-            Assert.ThrowsException<NullReferenceException>(() =>
+            _ = Assert.ThrowsException<NullReferenceException>(() =>
             {
                 _ = testClass.ToScript();
             });
@@ -159,7 +159,7 @@ namespace LibAoe2AISharp.Framework.Tests
         [TestMethod]
         public void AddTestNull()
         {
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            _ = Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 var testClass = new CommandCollection("CommandCollection comment") {
                     null,

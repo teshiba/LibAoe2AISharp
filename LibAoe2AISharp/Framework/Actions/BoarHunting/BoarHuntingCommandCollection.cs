@@ -1,8 +1,8 @@
-﻿using System.Collections.ObjectModel;
-using LibAoe2AISharp.Specifications;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System.Collections.ObjectModel;
+    using LibAoe2AISharp.Specifications;
+
     /// <summary>
     /// Collection of boar hunting commands.
     /// </summary>
@@ -11,27 +11,27 @@ namespace LibAoe2AISharp.Framework
         /// <summary>
         /// State of boar hunting.
         /// </summary>
-        public static readonly GoalId BoarState = new GoalId("BoarState", "State of boar hunting");
+        public static readonly GoalId BoarState = new ("BoarState", "State of boar hunting");
 
         /// <summary>
         /// Initialize.
         /// </summary>
-        public static readonly BoarGoal Init = new BoarGoal("Init", "Not hunt yet");
+        public static readonly BoarGoal Init = new ("Init", "Not hunt yet");
 
         /// <summary>
         /// Luring.
         /// </summary>
-        public static readonly BoarGoal Luring = new BoarGoal("luring", "Luring");
+        public static readonly BoarGoal Luring = new ("luring", "Luring");
 
         /// <summary>
         /// Eating.
         /// </summary>
-        public static readonly BoarGoal Eating = new BoarGoal("Eating", "Eating");
+        public static readonly BoarGoal Eating = new ("Eating", "Eating");
 
         /// <summary>
         /// Finish.
         /// </summary>
-        public static readonly BoarGoal Finish = new BoarGoal("End", "End hunting");
+        public static readonly BoarGoal Finish = new ("End", "End hunting");
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BoarHuntingCommandCollection"/> class.

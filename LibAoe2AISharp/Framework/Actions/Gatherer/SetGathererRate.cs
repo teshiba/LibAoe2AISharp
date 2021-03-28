@@ -1,9 +1,9 @@
-﻿using System;
-using LibAoe2AISharp.Specifications;
-using static LibAoe2AISharp.Specifications.Ope;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System;
+    using LibAoe2AISharp.Specifications;
+    using static LibAoe2AISharp.Specifications.Ope;
+
     /// <summary>
     /// Set strategic number of resources gatherer percentage.
     /// </summary>

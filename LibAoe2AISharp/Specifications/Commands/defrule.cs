@@ -1,8 +1,8 @@
-﻿using System;
-using LibAoe2AISharp.Utilty;
-
-namespace LibAoe2AISharp.Specifications
+﻿namespace LibAoe2AISharp.Specifications
 {
+    using System;
+    using LibAoe2AISharp.Utilty;
+
     /// <summary>
     /// Generate defrule script.
     /// </summary>
@@ -55,7 +55,7 @@ namespace LibAoe2AISharp.Specifications
         {
             get {
                 var name = GetType().FullName;
-                return name.Substring(name.IndexOf('.') + 1);
+                return name[(name.IndexOf('.') + 1) ..];
             }
         }
 

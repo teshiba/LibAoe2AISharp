@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using LibAoe2AISharp.Specifications;
-using LibAoe2AISharp.Utilty;
-using static LibAoe2AISharp.Specifications.Ope;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
+    using LibAoe2AISharp.Specifications;
+    using LibAoe2AISharp.Utilty;
+    using static LibAoe2AISharp.Specifications.Ope;
+
     /// <summary>
     /// conditions whether given resource amount has enough.
     /// </summary>
@@ -16,8 +16,7 @@ namespace LibAoe2AISharp.Framework
         /// resource cost list.
         /// </summary>
         [SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1025:Code should not contain multiple whitespace in a row", Justification = "<List>")]
-        private static readonly Dictionary<Enum, Cost> List = new Dictionary<Enum, Cost>
-        {
+        private static readonly Dictionary<Enum, Cost> List = new () {
             // buildings
             { building.farm,             new Cost() { W =  60          } },
             { building.mill,             new Cost() { W = 100          } },

@@ -74,16 +74,16 @@ namespace LibAoe2AISharp.Framework.Tests
         [TestMethod]
         public void ResourceAmountTestNullArg()
         {
-            Assert.ThrowsException<NullReferenceException>(() =>
-            {
-                _ = new  ResourceAmount(null);
-            });
+            _ = Assert.ThrowsException<NullReferenceException>(() =>
+              {
+                  _ = new ResourceAmount(null);
+              });
         }
 
         [TestMethod]
         public void ResourceAmountTestUnknownArg()
         {
-            Assert.ThrowsException<KeyNotFoundException>(() =>
+            _ = Assert.ThrowsException<KeyNotFoundException>(() =>
             {
                 _ = new ResourceAmount(unit.unknown);
             });

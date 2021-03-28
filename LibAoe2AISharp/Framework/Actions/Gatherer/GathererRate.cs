@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace LibAoe2AISharp.Framework
+﻿namespace LibAoe2AISharp.Framework
 {
+    using System;
+
     /// <summary>
     /// Manage resource gatherer rate.
     /// </summary>
