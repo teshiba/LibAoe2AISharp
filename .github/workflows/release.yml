@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Pack
-      run: dotnet pack LibAoe2AISharp.csproj -o artifacts/
+      run: dotnet pack ${GITHUB_WORKSPACE}/LibAoe2AISharp/LibAoe2AISharp.csproj -o artifacts/
     - uses: actions/upload-artifact@v1
       with:
         name: artifacts
