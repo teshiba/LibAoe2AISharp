@@ -27,4 +27,4 @@ jobs:
     - name: Publish to GitHub Packages
       run: |
         dotnet nuget add source "https://nuget.pkg.github.com/teshiba/index.json" -n "github" -u teshiba -p ${{secrets.GH_PACKAGES_PAT}} --store-password-in-clear-text
-        dotnet nuget push "*.nupkg" --api-key ${{secrets.GH_PACKAGES_PAT}} --source "github" --skip-duplicate
+        dotnet nuget push ${GITHUB_WORKSPACE}/LibAoe2AISharp/bin/Release/"LibAoe2AISharp.*.nupkg" --api-key ${{secrets.GH_PACKAGES_PAT}} --source "github" --skip-duplicate
