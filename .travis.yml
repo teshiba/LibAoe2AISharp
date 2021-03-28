@@ -32,5 +32,5 @@ addons:
     notification_email: teshiba.satoshi@gmail.com
     build_command_prepend: "dotnet restore"
     build_command: "dotnet test"
-    branch_pattern: travis
+    branch_pattern: main
     
