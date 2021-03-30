@@ -1,4 +1,6 @@
 language: csharp
+os: linux
+dist: xenial
 mono: none
 dotnet: 5.0.201
 solution: LibAoe2AISharp.sln
@@ -14,6 +16,7 @@ branches:
   only:
   - main
   - travis
+  - coverity_scan
 
 env:
   global:
@@ -32,7 +35,5 @@ addons:
     notification_email: teshiba.satoshi@gmail.com
     build_command_prepend: "dotnet restore"
     build_command: "dotnet test"
-    branch_pattern: 
-     - main
-     - coverity_scan
+    branch_pattern: main | coverity_scan
     
