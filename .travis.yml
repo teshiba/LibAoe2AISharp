@@ -33,7 +33,5 @@ addons:
     notification_email: teshiba.satoshi@gmail.com
     build_command_prepend: "dotnet restore"
     build_command: "dotnet test"
-    branch_pattern: 
-     - main
-     - coverity_scan
+    branch_pattern: main | coverity_scan
     
