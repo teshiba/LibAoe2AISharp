@@ -37,8 +37,8 @@
         public override void Add(ICondition command)
         {
             // Shrink the first "and" operator, if item is Conditios.
-            var cond = command as Conditions;
-            if (cond?.Ope == Logical.And) {
+            if ((command is Conditions cond)
+                && (cond.Ope == Logical.And)) {
                 base.Add(cond.Condition1);
                 if (cond.Condition2 != null) {
                     base.Add(cond.Condition2);
