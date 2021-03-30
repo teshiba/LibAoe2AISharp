@@ -1,4 +1,6 @@
 language: csharp
+os: Linux
+dist: xenial
 mono: none
 dotnet: 5.0.201
 solution: LibAoe2AISharp.sln
